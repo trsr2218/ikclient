@@ -1,0 +1,144 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { Menu, X, Heart, Phone } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About Us' },
+  { href: '/services', label: 'Services' },
+  { href: '/events', label: 'Events' },
+  { href: '/contact', label: 'Contact' },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const navBg = isHome && !scrolled
+    ? 'bg-transparent'
+    : 'bg-[#0a3d47]/95 backdrop-blur-md shadow-lg shadow-black/10';
+
+  return (
+    <>
+      {/* Emergency banner */}
+      <div className="bg-[#e8a838] text-[#0a3d47] text-xs font-semibold py-2 px-4 text-center flex items-center justify-center gap-2">
+        <Phone className="w-3.5 h-3.5 shrink-0" />
+        <span>24/7 Emergency Line: </span>
+        <a href="tel:+260966841631" className="underline hover:no-underline">+260 966 841 631</a>
+        <span className="mx-1">·</span>
+        <a href="tel:+260979268260" className="underline hover:no-underline">+260 979 268 260</a>
+      </div>
+
+      <header className={cn('sticky top-0 z-40 transition-all duration-300', navBg)}>
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-white/20 group-hover:ring-white/50 transition-all shrink-0">
+              <Image src="/logo.jpg" alt="Ikhaya Home Logo" width={40} height={40} className="object-cover w-full h-full" />
+            </div>
+            <div className="hidden sm:block">
+              <span className="font-bold text-white text-lg leading-none block">Ikhaya Home</span>
+              <span className="text-teal-200 text-xs">Lusaka, Zambia</span>
+            </div>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-1">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'px-4 py-2 rounded-lg text-sm font-medium transition-all',
+                  pathname === href
+                    ? 'bg-white/15 text-white'
+                    : 'text-teal-100 hover:bg-white/10 hover:text-white'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/book"
+              className="text-sm font-medium text-teal-100 hover:text-white border border-teal-400/40 hover:border-white/40 px-4 py-2 rounded-lg transition-all"
+            >
+              Book Appointment
+            </Link>
+            <Link
+              href="/support"
+              className="flex items-center gap-1.5 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-semibold text-sm px-5 py-2 rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            >
+              <Heart className="w-3.5 h-3.5" />
+              Donate Now
+            </Link>
+          </div>
+
+          {/* Mobile menu toggle */}
+          <button
+            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </nav>
+
+        {/* Mobile menu */}
+        {open && (
+          <div className="lg:hidden bg-[#0a3d47] border-t border-white/10 px-4 py-4 space-y-1">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  'block px-4 py-3 rounded-lg text-sm font-medium transition-colors',
+                  pathname === href
+                    ? 'bg-white/15 text-white'
+                    : 'text-teal-100 hover:bg-white/10 hover:text-white'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+            <div className="pt-3 flex flex-col gap-2">
+              <Link
+                href="/book"
+                className="block text-center text-sm font-medium border border-teal-400/40 text-teal-100 px-4 py-3 rounded-lg"
+              >
+                Book Appointment
+              </Link>
+              <Link
+                href="/support"
+                className="flex items-center justify-center gap-1.5 bg-[#e8a838] text-[#0a3d47] font-semibold text-sm px-4 py-3 rounded-lg"
+              >
+                <Heart className="w-3.5 h-3.5" />
+                Donate Now
+              </Link>
+            </div>
+          </div>
+        )}
+      </header>
+    </>
+  );
+}
