@@ -5,50 +5,50 @@ import { ArrowRight, Heart, Shield, Users, Target, Eye, Award } from 'lucide-rea
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Ikhaya Home: our mission, history, team, and values guiding our work with survivors of gender-based violence in Zambia.',
+  description: 'Learn about A Place Called Home-Ikhaya: our mission, history, team, and values guiding our work on awareness, prevention, and response to sexual violence against children in Zambia.',
 };
 
 const values = [
-  { icon: Heart, title: 'Compassion', desc: 'Every person who walks through our doors is met with unconditional warmth and empathy.' },
+  { icon: Heart, title: 'Compassion', desc: 'Every person who reaches out to us is met with unconditional warmth and empathy.' },
   { icon: Shield, title: 'Dignity', desc: 'We affirm the inherent worth of every survivor and centre their agency in all decisions.' },
   { icon: Users, title: 'Community', desc: 'Lasting change is built with communities, not for them.' },
-  { icon: Award, title: 'Excellence', desc: 'We hold ourselves to the highest clinical and ethical standards in everything we do.' },
+  { icon: Award, title: 'Excellence', desc: 'We hold ourselves to the highest ethical and research standards in everything we do.' },
 ];
 
 const team = [
   {
     name: 'Moomba Thornicroft',
     role: 'Founder & Executive Director',
-    bio: 'With over 10 years of public health expertise in adolescent health and gender-based violence response, Moomba founded Ikhaya Home to fill a critical gap in survivor support services in Zambia.',
+    bio: 'With over 10 years of public health expertise in adolescent health, Moomba founded A Place Called Home-Ikhaya to fill a critical gap in the prevention of and response to sexual violence against children in Zambia.',
     initials: 'MT',
   },
   {
     name: 'Programme Director',
-    role: 'Head of Services',
-    bio: 'Oversees all four service pillars, ensuring trauma-informed, culturally sensitive support reaches every survivor who contacts us.',
+    role: 'Prevention & Capacity Building',
+    bio: 'Leads our school awareness programmes and our training of pastors, teachers, and community leaders in trauma-informed care and response.',
     initials: 'PD',
   },
   {
-    name: 'Legal Coordinator',
-    role: 'Justice & Advocacy Lead',
-    bio: 'A qualified lawyer with deep experience in Zambian family and criminal law, advocating for survivors at every level of the justice system.',
-    initials: 'LC',
+    name: 'Response Coordinator',
+    role: 'Survivor Support & Justice',
+    bio: 'Coordinates survivor escorts to police and court, whistleblower protection, and follow-up with police to ensure cases are not lost.',
+    initials: 'RC',
   },
   {
-    name: 'Clinical Psychologist',
-    role: 'Head of Counselling',
-    bio: 'Leads our trauma-informed counselling team, ensuring evidence-based mental health support for all clients.',
-    initials: 'CP',
+    name: 'Director of Research',
+    role: 'Research & Policy',
+    bio: 'A university-based research partner supporting our implementation science and policy-influence work within the field of child protection.',
+    initials: 'DR',
   },
 ];
 
 const milestones = [
-  { year: '2014', event: 'Ikhaya Home founded by Moomba Thornicroft in Lusaka' },
-  { year: '2016', event: 'Opened first dedicated safe shelter facility in Avondale' },
-  { year: '2018', event: 'Launched community prevention programme, reaching 500+ schools' },
-  { year: '2020', event: 'Expanded legal advocacy unit; secured 50+ successful court cases' },
-  { year: '2022', event: 'Recognised by UN Women Zambia for excellence in GBV response' },
-  { year: '2024', event: 'Reached 500+ survivors supported; expanded to Copperbelt province' },
+  { year: '2014', event: 'A Place Called Home-Ikhaya founded by Moomba Thornicroft in Lusaka' },
+  { year: '2016', event: 'Launched school-based awareness programme on child safety and consent' },
+  { year: '2018', event: 'Began training church leaders and pastors in trauma-informed care and response' },
+  { year: '2020', event: 'Played a leading role in the policy advocacy that made sexual offences non-bailable in Zambia' },
+  { year: '2022', event: 'Reached 60+ pastors and community leaders trained in trauma-informed care' },
+  { year: '2024', event: 'Launched a dedicated research arm for implementation science and policy influence' },
 ];
 
 export default function AboutPage() {
@@ -72,7 +72,7 @@ export default function AboutPage() {
             Built on belief. Driven by purpose.
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ikhaya Home was born from a simple conviction: that every child and young person in Zambia deserves to live free from violence, fear, and silence.
+            A Place Called Home-Ikhaya was born from a simple conviction: that every child in Zambia deserves to live free from sexual violence, fear, and silence. We are not a shelter or accommodation provider.
           </p>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold text-[#0d1b2a] mb-3">Our Mission</h2>
             <p className="text-gray-600 leading-relaxed">
-              To prevent, identify, and respond to sexual and gender-based violence among children, adolescents, and young people in Zambia: delivering safe housing, counselling, legal assistance, and community empowerment programmes that restore dignity and justice.
+              To focus on awareness, prevention, and response to sexual violence against children in Zambia: training church and community leaders, supporting survivors through reporting and justice, and driving policy change that protects children.
             </p>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </div>
             <h2 className="text-2xl font-bold text-[#0d1b2a] mb-3">Our Vision</h2>
             <p className="text-gray-600 leading-relaxed">
-              A Zambia where every child and young person lives free from sexual and gender-based violence: where survivors are heard, believed, and supported to rebuild their lives with dignity, safety, and justice.
+              A Zambia where every child lives free from sexual violence: where survivors are heard, believed, and supported to rebuild their lives with dignity, safety, and justice.
             </p>
           </div>
         </div>
@@ -109,16 +109,16 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-6">From one person&apos;s conviction to a movement</h2>
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                Ikhaya Home began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual and gender-based violence were falling through the cracks of existing systems. There were no safe spaces, no integrated support, and no voice for those who needed it most.
+                A Place Called Home-Ikhaya began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual violence against children were falling through the cracks of existing systems. There was no integrated support, and often no voice for those who needed it most — including neighbours who suspected abuse but were afraid to come forward.
               </p>
               <p>
-                Starting with a single room and a phone number, Moomba began connecting survivors to counselling, legal aid, and emergency housing through goodwill and determination. Word spread. The need was undeniable.
+                Starting with a single phone number, Moomba began connecting survivors to reporting support, and training the community leaders who were already trusted first responders — pastors, teachers, and community leaders — through goodwill and determination. Word spread. The need was undeniable.
               </p>
               <p>
-                Today, Ikhaya Home operates from its own facility in Avondale, Lusaka, with a dedicated team of social workers, counsellors, legal advocates, and community educators. We have supported over 500 survivors, reached thousands through prevention programmes, and secured justice for dozens through the courts.
+                Today, Home-Ikhaya runs school awareness programmes, trains church and community leaders in trauma-informed care, escorts survivors through reporting and justice, and conducts research to influence policy. We have trained over 60 pastors and leaders, and helped influence the policy that made sexual offences non-bailable in Zambia.
               </p>
               <p className="font-medium text-[#0a3d47]">
-                The work is far from over. Every day, survivors reach out. Every day, we answer.
+                The work is far from over. Every day, survivors and whistleblowers reach out. Every day, we answer.
               </p>
             </div>
           </div>

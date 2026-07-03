@@ -5,10 +5,10 @@ import type { ChangeEvent, FormEvent } from 'react';
 import { Calendar, Clock, Shield, CheckCircle, Phone } from 'lucide-react';
 
 const serviceTypes = [
-  { value: 'counselling', label: 'Counselling / Mental Health Support' },
-  { value: 'shelter', label: 'Emergency Shelter Enquiry' },
-  { value: 'legal', label: 'Legal Consultation' },
-  { value: 'prevention', label: 'Prevention / Education Programme' },
+  { value: 'report', label: 'Report a Concern / Survivor Support' },
+  { value: 'training', label: 'Church, School, or Community Training' },
+  { value: 'awareness', label: 'School Awareness Programme' },
+  { value: 'research', label: 'Research or Policy Collaboration' },
   { value: 'general', label: 'General Support Enquiry' },
 ];
 

@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import {
   Heart, Shield, BookOpen, Scale, ArrowRight,
-  ChevronDown, Quote, Star, Users, Home as HomeIcon, Handshake,
-  Phone, Calendar, CheckCircle,
+  ChevronDown, Quote, Star, Users, GraduationCap, Handshake,
+  Phone, Calendar, CheckCircle, ThumbsUp,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -60,32 +60,32 @@ const UNSPLASH = 'https://images.unsplash.com';
 const services = [
   {
     icon: BookOpen,
-    title: 'Prevention & Education',
-    desc: 'School and community programmes that build awareness of safety, equality, and respect before violence occurs.',
-    href: '/services#prevention',
+    title: 'Awareness & Prevention',
+    desc: 'School programmes that teach children about good, bad, and uncomfortable touch, consent, and who a trusted adult is.',
+    href: '/services#awareness',
     img: `${UNSPLASH}/photo-1526413232644-8a40f03cc03b?auto=format&fit=crop&w=600&q=75`,
     color: 'from-blue-900/80',
   },
   {
-    icon: HomeIcon,
-    title: 'Safe Shelter & Protection',
-    desc: 'Emergency housing and relocation for survivors in immediate danger, delivered with dignity and 24-hour care.',
-    href: '/services#shelter',
+    icon: GraduationCap,
+    title: 'Capacity Building',
+    desc: 'Training pastors, church leaders, teachers, and community leaders in trauma-informed care and response.',
+    href: '/services#capacity',
     img: `${UNSPLASH}/photo-1659174280011-0b9ec848c2d7?auto=format&fit=crop&w=600&q=75`,
     color: 'from-teal-900/80',
   },
   {
     icon: Heart,
-    title: 'Healing & Mental Health',
-    desc: 'Trauma-informed counselling and psychosocial support to help survivors rebuild their lives with confidence.',
-    href: '/services#healing',
+    title: 'Survivor Support & Response',
+    desc: 'Helping survivors report cases, escorting them through the process, and protecting whistleblowers who speak up.',
+    href: '/services#response',
     img: `${UNSPLASH}/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=75`,
     color: 'from-rose-900/80',
   },
   {
     icon: Scale,
-    title: 'Justice & Advocacy',
-    desc: 'Legal aid, case management, and policy advocacy so every survivor can access justice and protective systems.',
+    title: 'Justice, Advocacy & Research',
+    desc: 'Escorting survivors to court, holding the police accountable, and driving policy change through research.',
     href: '/services#justice',
     img: `${UNSPLASH}/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=75`,
     color: 'from-amber-900/80',
@@ -93,24 +93,24 @@ const services = [
 ];
 
 const stats = [
-  { target: 500, suffix: '+', label: 'Survivors Supported', icon: Users },
+  { target: 60, suffix: '+', label: 'Pastors & Leaders Trained', icon: GraduationCap },
   { target: 10, suffix: '+', label: 'Years of Service', icon: Shield },
+  { target: 500, suffix: '+', label: 'Children Reached Through School Programmes', icon: Users },
   { target: 3000, suffix: '+', label: 'Community Members Reached', icon: Heart },
-  { target: 95, suffix: '%', label: 'Client Satisfaction', icon: Star },
 ];
 
 const testimonials = [
   {
-    quote: 'Ikhaya Home gave me back my voice. The counsellors never judged me. They helped me understand what happened was not my fault.',
-    name: 'A., Survivor', location: 'Lusaka', stars: 5,
+    quote: 'The trauma-informed care training changed how our whole congregation responds. We finally know how to listen, and how to help, without causing more harm.',
+    name: 'Pastor, Trained Church Leader', location: 'Lusaka', stars: 5,
   },
   {
-    quote: 'I had nowhere to go. Within hours of calling, I had a safe roof over my head and someone holding my hand through every step.',
-    name: 'M., Survivor', location: 'Copperbelt', stars: 5,
+    quote: 'Our learners now know what a bad touch is, and who they can trust to tell. That knowledge alone has already made a difference in our school.',
+    name: 'Teacher, Partner School', location: 'Copperbelt', stars: 5,
   },
   {
-    quote: 'The legal team helped me navigate a system I never understood. They fought for me when I had no strength left to fight for myself.',
-    name: 'T., Survivor', location: 'Lusaka', stars: 5,
+    quote: 'I was scared to report what I knew. Home-Ikhaya protected my identity and made sure the child was safe. I would do it again.',
+    name: 'Community Whistleblower', location: 'Lusaka', stars: 5,
   },
 ];
 
@@ -120,21 +120,21 @@ const pillars = [
   {
     icon: Shield,
     title: 'Survivor Support',
-    desc: 'Supporting survivors of sexual and gender-based violence through protection, care, and advocacy.',
+    desc: 'Supporting survivors of sexual violence through protection, escort, and advocacy — never victims, always survivors.',
     bg: 'bg-[#C41E3A]',
-    href: '/services#shelter',
+    href: '/services#response',
   },
   {
-    icon: Heart,
-    title: 'Counselling & Healing',
-    desc: 'Providing confidential shelter, trauma-informed counselling, and survivor-centered support.',
+    icon: GraduationCap,
+    title: 'Training & Capacity Building',
+    desc: 'Equipping pastors, teachers, and community leaders with trauma-informed care and response skills.',
     bg: 'bg-[#2056AE]',
-    href: '/services#healing',
+    href: '/services#capacity',
   },
   {
     icon: Handshake,
     title: 'Community Action',
-    desc: 'Donate, partner with us, or help create safer communities across Zambia.',
+    desc: 'Donate, endorse our advocacy campaigns, or help create safer communities for children across Zambia.',
     bg: 'bg-[#1B3A8A]',
     href: '/support',
   },
@@ -143,25 +143,25 @@ const pillars = [
 const donationSteps = [
   {
     num: '1',
-    title: 'Safe Shelter & Counselling',
-    desc: 'Provides emergency housing and protection for survivors at immediate risk. Supports trauma-informed counselling and mental health care.',
+    title: 'Training & Capacity Building',
+    desc: 'Funds trauma-informed care training for pastors, teachers, and community leaders who are often the first responders.',
   },
   {
     num: '2',
-    title: 'Legal Support',
-    desc: 'Helps survivors access justice through case management and legal assistance from our qualified advocates.',
+    title: 'Survivor Support & Justice',
+    desc: 'Helps survivors report cases, escorts them through police and court processes, and holds systems accountable.',
   },
   {
     num: '3',
     title: 'Prevention & Education',
-    desc: 'Funds community education and school programmes to prevent future violence and build safer communities.',
+    desc: 'Funds school-based awareness programmes that teach children about safety, consent, and who to trust.',
   },
 ];
 
 const upcomingEvents = [
-  { date: 'Tue, 15 Jul 2026', title: 'GBV Awareness Workshop', location: 'Lusaka' },
-  { date: 'Sat, 2 Aug 2026', title: 'Community Safety Forum', location: 'Copperbelt' },
-  { date: 'Fri, 19 Sep 2026', title: 'Youth Empowerment Training', location: 'Lusaka' },
+  { date: 'Tue, 15 Jul 2026', title: 'Child Safety Awareness Workshop', location: 'Lusaka' },
+  { date: 'Sat, 2 Aug 2026', title: 'Trauma-Informed Care Training for Church Leaders', location: 'Copperbelt' },
+  { date: 'Fri, 19 Sep 2026', title: 'Safeguarding in Schools: Teacher Training', location: 'Lusaka' },
 ];
 
 function StatCard({ target, suffix, label, icon: Icon }: { target: number; suffix: string; label: string; icon: React.ElementType }) {
@@ -188,6 +188,58 @@ function Orb({ className }: { className?: string }) {
   );
 }
 
+/* ─── advocacy endorsement ─── */
+const VOTE_BASELINE = 1284;
+
+function VoteSection() {
+  const [endorsed, setEndorsed] = useState(false);
+  const [count, setCount] = useState(VOTE_BASELINE);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('registry-endorsed');
+    if (stored === '1') {
+      setEndorsed(true);
+      setCount(VOTE_BASELINE + 1);
+    }
+  }, []);
+
+  const handleEndorse = () => {
+    if (endorsed) return;
+    setEndorsed(true);
+    setCount((c) => c + 1);
+    localStorage.setItem('registry-endorsed', '1');
+  };
+
+  return (
+    <section className="py-20 px-4 bg-[#f0f9fb]">
+      <div className="max-w-3xl mx-auto text-center">
+        <FadeUp>
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#2056AE] mb-3">Take a Stand</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-4">We&apos;re Calling for a Sex Offender Registry</h2>
+          <p className="text-gray-500 text-lg mb-8 leading-relaxed">
+            Add your voice to our advocacy work. Every endorsement helps us make the case to policymakers
+            for a public sex offender register in Zambia.
+          </p>
+          <button
+            onClick={handleEndorse}
+            disabled={endorsed}
+            className={cn(
+              'inline-flex items-center gap-2 font-bold px-9 py-4 rounded-xl transition-all shadow-lg text-base',
+              endorsed
+                ? 'bg-teal-600 text-white cursor-default'
+                : 'bg-[#2056AE] hover:bg-[#1B3A8A] text-white hover:-translate-y-0.5'
+            )}
+          >
+            {endorsed ? <CheckCircle className="w-4 h-4" /> : <ThumbsUp className="w-4 h-4" />}
+            {endorsed ? 'Thank You for Endorsing' : 'I Endorse a Sex Offender Registry'}
+          </button>
+          <p className="text-sm text-gray-400 mt-5">{count.toLocaleString()} people have endorsed this campaign</p>
+        </FadeUp>
+      </div>
+    </section>
+  );
+}
+
 /* ─── page ─── */
 export default function HomePage() {
   const heroRef = useRef(null);
@@ -202,7 +254,7 @@ export default function HomePage() {
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <Image
             src={`${UNSPLASH}/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=1920&q=85`}
-            alt="A survivor finding strength — Ikhaya Home Zambia"
+            alt="A survivor finding strength — A Place Called Home-Ikhaya, Zambia"
             fill
             priority
             className="object-cover object-center"
@@ -232,12 +284,12 @@ export default function HomePage() {
             transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-6"
           >
-            A Safe Place to{' '}
+            A Place Called{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
-              Heal, Be Heard,
+              Home-Ikhaya
             </span>{' '}
             <br className="hidden sm:block" />
-            and Begin Again
+            for Every Child&apos;s Safety
           </motion.h1>
 
           <motion.p
@@ -246,8 +298,9 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-teal-100/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Ikhaya Home supports survivors of sexual and gender-based violence in Zambia
-            through shelter, counselling, legal advocacy, and community empowerment.
+            A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response
+            to sexual violence against children — training communities, supporting survivors, and
+            driving policy change. We are not a shelter or accommodation provider.
           </motion.p>
 
           <motion.div
@@ -313,14 +366,14 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <FadeUp>
             <div className="inline-flex items-center gap-2 bg-[#C41E3A]/10 text-[#C41E3A] text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
-              <Phone className="w-3.5 h-3.5" /> Emergency Support
+              <Phone className="w-3.5 h-3.5" /> Report a Concern
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0d1b2a] mb-4 leading-tight">
-              Need Help Right Now?
+              Need to Report or Get Help?
             </h2>
             <p className="text-gray-500 text-lg mb-8 leading-relaxed">
-              If you or someone you know is experiencing sexual or gender-based violence,
-              confidential support is available — 24 hours a day.
+              If a child is at risk, or you know of sexual violence that needs to be reported,
+              confidential support is available — 24 hours a day. Your identity is protected.
             </p>
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 mb-8">
               <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">Call or WhatsApp</p>
@@ -409,13 +462,13 @@ export default function HomePage() {
           <FadeUp>
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-3">Our Mission</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] leading-tight mb-5">
-              Preventing violence. Protecting lives. Restoring dignity.
+              Preventing violence. Protecting children. Restoring dignity.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Founded by Moomba Thornicroft with over a decade of public health expertise, Ikhaya Home was built on the belief that every child and young person in Zambia deserves to live free from violence and fear.
+              Founded by Moomba Thornicroft with over a decade of public health expertise, A Place Called Home-Ikhaya was built on the belief that every child in Zambia deserves to live free from sexual violence and silence.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              We combine emergency response with long-term rehabilitation because healing is a journey, and we walk every step of it with our clients.
+              We combine awareness, training, and survivor-centred response because ending sexual violence against children takes a whole community, and we walk every step of it alongside those we serve.
             </p>
             <Link href="/about" className="inline-flex items-center gap-2 bg-[#0a3d47] hover:bg-[#146a82] text-white font-semibold px-6 py-3 rounded-xl transition-all">
               Read Our Story <ArrowRight className="w-4 h-4" />
@@ -465,10 +518,10 @@ export default function HomePage() {
               <span className="inline-block text-xs font-semibold tracking-widest uppercase text-blue-200 mb-4">Make a Difference</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">Donate</h2>
               <p className="text-blue-100 leading-relaxed mb-4">
-                Your support helps survivors of sexual and gender-based violence find safety, healing, and justice.
+                Your support helps survivors of sexual violence find protection, response, and justice.
               </p>
               <p className="text-blue-100 leading-relaxed mb-8">
-                Every contribution directly strengthens our ability to provide shelter, counselling, legal support, and prevention programmes for children, adolescents, and young people in Zambia.
+                Every contribution directly strengthens our ability to train pastors and teachers, support survivors, and run prevention programmes for children across Zambia.
               </p>
               <Link href="/support" className="inline-flex items-center gap-2 bg-[#C41E3A] hover:bg-[#a51732] text-white font-bold px-9 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg">
                 <Heart className="w-4 h-4" /> DONATE NOW
@@ -479,7 +532,7 @@ export default function HomePage() {
           <div className="relative min-h-[320px]">
             <Image
               src={`${UNSPLASH}/photo-1511355823905-f042687908eb?auto=format&fit=crop&w=900&q=80`}
-              alt="Children smiling — Ikhaya Home Zambia"
+              alt="Children smiling — A Place Called Home-Ikhaya, Zambia"
               fill
               className="object-cover object-center"
               sizes="(max-width:1024px) 100vw, 50vw"
@@ -499,11 +552,12 @@ export default function HomePage() {
           </FadeUp>
           <FadeUp delay={0.15}>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
-              Survivors often face violence, stigma, and isolation with limited access to safe spaces or support services.
-              Your donation helps Ikhaya respond with dignity, compassion, and survivor-centered care.
+              Children who experience sexual violence often face silence, stigma, and systems that are not
+              equipped to respond. Your donation helps Home-Ikhaya respond with dignity, compassion, and
+              survivor-centred care.
             </p>
             <p className="text-gray-300 leading-relaxed text-lg">
-              Together, we can protect lives, restore hope, and help prevent violence before it happens.
+              Together, we can protect children, restore hope, and help prevent violence before it happens.
             </p>
           </FadeUp>
         </div>
@@ -537,7 +591,7 @@ export default function HomePage() {
               <div className="flex-1">
                 <h3 className="font-bold text-xl mb-2">Transparency &amp; Accountability</h3>
                 <p className="text-teal-200 text-sm leading-relaxed">
-                  Ikhaya is committed to responsible, transparent use of all funds. Donations directly support survivor services, prevention programmes, and essential operations. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
+                  Home-Ikhaya is committed to responsible, transparent use of all funds. When you donate, you can choose to be publicly thanked or to give anonymously — either way, donations directly support survivor response, training, and prevention programmes. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
                 </p>
               </div>
               <CheckCircle className="w-12 h-12 text-[#e8a838] shrink-0" />
@@ -545,6 +599,9 @@ export default function HomePage() {
           </FadeUp>
         </div>
       </section>
+
+      {/* ── TAKE A STAND / ADVOCACY VOTE ── */}
+      <VoteSection />
 
       {/* ── LEADERSHIP ── */}
       <section className="py-0 bg-[#f5f5f5] overflow-hidden">
@@ -556,10 +613,10 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-1 leading-tight">Moomba Thornicroft</h2>
               <p className="text-[#e8a838] font-semibold italic mb-6">Founder &amp; Executive Director</p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Moomba Mbolongwe Thornicroft is the Founder and Executive Director of Ikhaya Home, a woman-led organisation responding to sexual and gender-based violence in Zambia. A trained public health specialist with over 10 years of experience, she has worked extensively with adolescents, communities, and health systems.
+                Moomba Mbolongwe Thornicroft is the Founder and Executive Director of A Place Called Home-Ikhaya, a woman-led organisation responding to sexual violence against children in Zambia. A trained public health specialist with over 10 years of experience, she has worked extensively with adolescents, communities, and health systems.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Growing up in Zambia, Moomba saw how violence thrives in silence. That reality shaped her commitment to building Ikhaya as a true home — a place of safety, healing, and hope for survivors.
+                Growing up in Zambia, Moomba saw how violence against children thrives in silence. That reality shaped her commitment to building Home-Ikhaya as a place of safety, awareness, and justice for children and survivors. She has been nominated for a humanitarian award in recognition of this work.
               </p>
               <div className="flex items-center gap-3">
                 {(['Facebook', 'LinkedIn', 'Instagram'] as const).map((label) => (
@@ -577,7 +634,7 @@ export default function HomePage() {
           <div className="relative min-h-[380px]">
             <Image
               src={`${UNSPLASH}/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=900&q=85&crop=faces`}
-              alt="Moomba Thornicroft — Executive Director, Ikhaya Home"
+              alt="Moomba Thornicroft — Executive Director, A Place Called Home-Ikhaya"
               fill
               className="object-cover object-top"
               sizes="(max-width:1024px) 100vw, 50vw"
@@ -592,8 +649,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <FadeUp className="text-center mb-14">
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-3">Voices of Hope</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a]">Stories from Survivors</h2>
-            <p className="mt-3 text-gray-500 max-w-md mx-auto text-sm">Shared with permission. Names abbreviated for safety.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a]">Voices from Our Community</h2>
+            <p className="mt-3 text-gray-500 max-w-md mx-auto text-sm">Shared with permission. Identifying details withheld for safety.</p>
           </FadeUp>
           <div className="grid sm:grid-cols-3 gap-6">
             {testimonials.map(({ quote, name, location, stars }, i) => (
@@ -709,10 +766,10 @@ export default function HomePage() {
           <FadeUp>
             <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-4">Make a Difference</span>
             <h2 className="text-3xl sm:text-5xl font-bold text-white mb-5 leading-tight">
-              Your donation funds safety, healing, and justice
+              Your donation funds awareness, training, and justice
             </h2>
             <p className="text-teal-200 mb-8 text-lg max-w-xl mx-auto">
-              K50 funds a counselling session. K200 covers a week of emergency shelter. Every kwacha counts.
+              K50 funds a school awareness session. K200 trains a pastor in trauma-informed care. Every kwacha counts.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link href="/support" className="flex items-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold px-10 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-xl text-base">

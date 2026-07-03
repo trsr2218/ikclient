@@ -1,73 +1,73 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, Home as HomeIcon, Heart, Scale, ArrowRight, CheckCircle, Phone } from 'lucide-react';
+import { BookOpen, GraduationCap, Heart, Scale, ArrowRight, CheckCircle, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Ikhaya Home provides prevention education, safe shelter, trauma counselling, and legal advocacy for survivors of gender-based violence in Zambia.',
+  description: 'A Place Called Home-Ikhaya provides awareness and prevention education, capacity building for church and community leaders, survivor support, and justice advocacy for children in Zambia.',
 };
 
 const services = [
   {
-    id: 'prevention',
+    id: 'awareness',
     icon: BookOpen,
     color: 'bg-blue-600',
     lightColor: 'bg-blue-50',
     textColor: 'text-blue-700',
-    title: 'Prevention & Education',
+    title: 'Awareness & Prevention',
     subtitle: 'Stopping violence before it starts',
     description:
-      'Our prevention programmes work at school and community level to build a culture of respect, safety, and equality. We train teachers, community leaders, and young people to recognise, report, and respond to gender-based violence.',
+      'Our prevention programmes go into schools and communities to build awareness before violence happens. Children learn what is bad touch, good touch, and uncomfortable touch, when it is okay to say no, and who a trusted adult is.',
     features: [
       'School-based awareness workshops',
-      'Community leader training and sensitisation',
-      'Safe reporting pathways for young people',
-      'Age-appropriate curriculum on consent and safety',
-      'Male engagement and bystander programmes',
-      'Parent and caregiver support groups',
+      'Age-appropriate lessons on consent and safety',
+      'Teaching children how and where to report',
+      'Identifying a trusted adult',
+      'Community sensitisation sessions',
+      'Parent and caregiver awareness support',
     ],
-    who: 'Schools, youth groups, community organisations, and local leaders across Zambia.',
+    who: 'Schools, children, and communities across Zambia.',
   },
   {
-    id: 'shelter',
-    icon: HomeIcon,
+    id: 'capacity',
+    icon: GraduationCap,
     color: 'bg-teal-600',
     lightColor: 'bg-teal-50',
     textColor: 'text-teal-700',
-    title: 'Safe Shelter & Protection',
-    subtitle: 'Safety and dignity in moments of crisis',
+    title: 'Capacity Building',
+    subtitle: 'Equipping the first responders',
     description:
-      'When a survivor is in immediate danger, we act fast. Our emergency shelter provides a safe, confidential space where survivors can rest, recover, and plan their next steps: free from fear and with full support around them.',
+      'The church is a key responder to issues in the community, but is often not equipped to handle matters of a sexual nature. We train pastors, church leaders, teachers, and other community leaders in trauma-informed care and response — over 60 pastors trained to date.',
     features: [
-      '24/7 emergency intake and hotline',
-      'Confidential emergency housing',
-      'Safe relocation assistance',
-      'Basic needs: food, clothing, hygiene',
-      'Child-friendly safe spaces',
-      'Security and safety planning',
+      'Trauma-informed care and response training',
+      'Training for pastors and church leaders',
+      'Training for teachers and school staff',
+      'Training for other community leaders',
+      'Guidance on responding to disclosures',
+      'Ongoing mentorship and refresher sessions',
     ],
-    who: 'Survivors of sexual and gender-based violence in immediate danger, including children and adolescents.',
+    who: 'Pastors, church leaders, teachers, and community leaders.',
   },
   {
-    id: 'healing',
+    id: 'response',
     icon: Heart,
     color: 'bg-rose-600',
     lightColor: 'bg-rose-50',
     textColor: 'text-rose-700',
-    title: 'Healing & Mental Health',
-    subtitle: 'Trauma-informed care for the whole person',
+    title: 'Survivor Support & Response',
+    subtitle: 'Standing with survivors, protecting whistleblowers',
     description:
-      'Healing from gender-based violence is a complex, non-linear process. Our clinical team provides evidence-based, trauma-informed counselling and psychosocial support that meets each survivor where they are.',
+      'We support survivors — never victims — in reporting cases to the police, and escort them through the process when they are unable to do it on their own. We also receive whistleblower reports and protect the identity of anyone who comes forward.',
     features: [
-      'Individual trauma counselling',
-      'Group therapy and peer support circles',
-      'Child and adolescent psychosocial support',
-      'Crisis intervention services',
-      'Family counselling and mediation',
-      'Referral to specialist psychiatric care',
+      'Help reporting cases to the police',
+      'Escorting survivors through the reporting process',
+      'Protected, anonymous whistleblower reporting',
+      'Rescue and placement into a place of safety',
+      'Coordination to ensure survivor safety comes first',
+      'Ongoing follow-up and support',
     ],
-    who: 'All survivors of SGBV: including children, adolescents, and adult women and men.',
+    who: 'Survivors of sexual violence against children, and anyone reporting on their behalf.',
   },
   {
     id: 'justice',
@@ -75,19 +75,19 @@ const services = [
     color: 'bg-amber-600',
     lightColor: 'bg-amber-50',
     textColor: 'text-amber-700',
-    title: 'Justice & Advocacy',
-    subtitle: 'Legal power for those who need it most',
+    title: 'Justice, Advocacy & Research',
+    subtitle: 'Following through until justice is served',
     description:
-      'Navigating the justice system after trauma is overwhelming. Our legal team provides hands-on case management, court accompaniment, and policy advocacy so that survivors can access the justice they deserve.',
+      'Our priority is the safety of the survivor first, and then justice. We escort survivors to court, follow up on lost police dockets, and hold the police accountable. Our research arm conducts implementation science and policy-influence research within our field — we helped influence the policy that made sexual offences non-bailable in Zambia.',
     features: [
-      'Free legal consultation and representation',
-      'Police station and court accompaniment',
-      'Case management and documentation',
-      'Protection order assistance',
+      'Court accompaniment for survivors',
+      'Follow-up on police dockets and case progress',
+      'Holding the police accountable',
       'Policy advocacy and law reform engagement',
-      'Coordination with Zambia Police GBV unit',
+      'Implementation science research within our field',
+      'Advocacy for a public sex offender registry',
     ],
-    who: 'Survivors seeking legal redress or protection, particularly those unable to afford private legal counsel.',
+    who: 'Survivors seeking justice, and policymakers we work with on reform.',
   },
 ];
 
@@ -109,10 +109,10 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center w-full">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-4">Services</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">
-            Holistic support, every step of the way
+            Holistic protection, every step of the way
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Four interconnected service pillars designed to meet survivors wherever they are: in crisis, in recovery, and in pursuit of justice.
+            Four interconnected pillars designed to prevent violence, equip responders, support survivors, and pursue justice — we are not a shelter or accommodation provider.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {services.map((s) => (
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                   <span className="font-semibold text-[#0a3d47]">Who this is for:</span> {service.who}
                 </p>
                 <Link href="/book" className="inline-flex items-center gap-2 bg-[#0a3d47] hover:bg-[#146a82] text-white font-semibold px-6 py-3 rounded-xl transition-all text-sm">
-                  Access This Service <ArrowRight className="w-4 h-4" />
+                  Request This Service <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
@@ -170,16 +170,16 @@ export default function ServicesPage() {
       })}
 
       {/* Emergency CTA */}
-      <section className="py-16 px-4 bg-[#e8a838]">
+      <section className="py-16 px-4 bg-[#C41E3A]">
         <div className="max-w-3xl mx-auto text-center">
-          <Phone className="w-10 h-10 text-[#0a3d47] mx-auto mb-4" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#0a3d47] mb-3">Need help right now?</h2>
-          <p className="text-[#0a3d47]/80 mb-6">Our emergency line is open 24 hours a day, 7 days a week. You don&apos;t have to face this alone.</p>
+          <Phone className="w-10 h-10 text-white mx-auto mb-4" />
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Need to report a concern right now?</h2>
+          <p className="text-white/80 mb-6">Our support line is open 24 hours a day, 7 days a week. Your identity is protected.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:+260966841631" className="bg-[#0a3d47] hover:bg-[#041e24] text-white font-bold px-8 py-3.5 rounded-xl transition-all">
               Call +260 966 841 631
             </a>
-            <a href="tel:+260979268260" className="bg-[#0a3d47]/20 hover:bg-[#0a3d47]/30 text-[#0a3d47] font-bold px-8 py-3.5 rounded-xl transition-all border border-[#0a3d47]/20">
+            <a href="tel:+260979268260" className="bg-white/15 hover:bg-white/25 text-white font-bold px-8 py-3.5 rounded-xl transition-all border border-white/30">
               Call +260 979 268 260
             </a>
           </div>

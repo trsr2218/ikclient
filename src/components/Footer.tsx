@@ -29,17 +29,17 @@ export default function Footer() {
       <div className="bg-gradient-to-r from-[#0a3d47] to-[#146a82] py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-            Together, we build a Zambia free from fear
+            Together, we build a Zambia free from silence
           </h2>
           <p className="text-teal-200 mb-6 max-w-xl mx-auto">
-            Your support, however small, changes lives. Every kwacha funds safety, healing, and justice.
+            Your support, however small, changes lives. Every kwacha funds awareness, training, and protection for children.
           </p>
           <Link
             href="/support"
             className="inline-flex items-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg"
           >
             <Heart className="w-4 h-4" />
-            Support Ikhaya Home
+            Support Home-Ikhaya
           </Link>
         </div>
       </div>
@@ -51,15 +51,15 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4 group">
               <div className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/20 shrink-0">
-                <Image src="/logo.jpg" alt="Ikhaya Home Logo" width={48} height={48} className="object-cover w-full h-full" />
+                <Image src="/logo.jpg" alt="A Place Called Home-Ikhaya Logo" width={48} height={48} className="object-cover w-full h-full" />
               </div>
               <div>
-                <span className="font-bold text-white text-xl block leading-none">Ikhaya Home</span>
-                <span className="text-teal-400 text-xs">Safe Shelter · Healing · Justice</span>
+                <span className="font-bold text-white text-xl block leading-none">A Place Called Home-Ikhaya</span>
+                <span className="text-teal-400 text-xs">Awareness · Prevention · Response</span>
               </div>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-5 max-w-xs">
-              Preventing, identifying, and responding to sexual and gender-based violence among children, adolescents, and young people in Zambia.
+              Awareness, prevention, and response to sexual violence against children in Zambia — training church and community leaders, supporting survivors, and driving policy change. We are not a shelter or accommodation provider.
             </p>
 
             {/* Contact */}
@@ -122,9 +122,9 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5 py-5 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Ikhaya Home. All rights reserved. Registered Nonprofit: Zambia.</p>
+          <p>&copy; {new Date().getFullYear()} A Place Called Home-Ikhaya. All rights reserved. Registered Nonprofit: Zambia.</p>
           <p className="flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-red-400 mx-0.5" /> for survivors
+            Made with <Heart className="w-3 h-3 text-red-400 mx-0.5" /> for children
           </p>
         </div>
       </div>

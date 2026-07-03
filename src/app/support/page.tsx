@@ -2,24 +2,26 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Heart, Users, Handshake, CheckCircle, ArrowRight } from 'lucide-react';
+import { Heart, Users, Handshake, CheckCircle, ArrowRight, Landmark, Smartphone, Eye, EyeOff } from 'lucide-react';
 
 const amounts = [10, 50, 100, 200, 500];
 const frequencies = ['once', 'monthly', 'yearly'] as const;
 type Freq = typeof frequencies[number];
+type Visibility = 'public' | 'anonymous';
 
 const impacts = [
   { amount: 'K10', impact: 'covers transport for a survivor to reach us safely' },
-  { amount: 'K50', impact: 'funds one full counselling session' },
-  { amount: 'K100', impact: 'provides emergency food and hygiene supplies for one week' },
-  { amount: 'K200', impact: 'covers one week of emergency shelter' },
-  { amount: 'K500', impact: 'funds a survivor\'s full legal case intake and documentation' },
+  { amount: 'K50', impact: 'funds one school awareness session for children' },
+  { amount: 'K100', impact: 'provides materials for a trauma-informed care training session' },
+  { amount: 'K200', impact: 'trains one pastor or community leader in trauma-informed care' },
+  { amount: 'K500', impact: 'funds a survivor\'s full case escort and documentation' },
 ];
 
 export default function SupportPage() {
   const [freq, setFreq] = useState<Freq>('once');
   const [selected, setSelected] = useState<number | null>(100);
   const [custom, setCustom] = useState('');
+  const [visibility, setVisibility] = useState<Visibility>('public');
 
   return (
     <>
@@ -29,7 +31,7 @@ export default function SupportPage() {
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-4">Support Us</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">Your generosity changes lives</h1>
           <p className="text-teal-100/80 text-lg leading-relaxed">
-            Every contribution: however large or small: directly funds safety, healing, and justice for survivors of gender-based violence in Zambia.
+            Every contribution: however large or small: directly funds awareness, training, and justice for survivors of sexual violence against children in Zambia.
           </p>
         </div>
       </section>
@@ -97,12 +99,56 @@ export default function SupportPage() {
               </div>
             )}
 
+            {/* Public / anonymous */}
+            <p className="text-sm font-semibold text-gray-500 mb-3">Would you like to be thanked publicly, or remain anonymous?</p>
+            <div className="grid grid-cols-2 gap-3 mb-7">
+              <button
+                type="button"
+                onClick={() => setVisibility('public')}
+                className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold border-2 transition-all ${
+                  visibility === 'public' ? 'border-[#0a3d47] bg-[#0a3d47] text-white' : 'border-gray-200 text-gray-600 hover:border-[#0a3d47]/50'
+                }`}
+              >
+                <Eye className="w-4 h-4" /> Thank Me Publicly
+              </button>
+              <button
+                type="button"
+                onClick={() => setVisibility('anonymous')}
+                className={`flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold border-2 transition-all ${
+                  visibility === 'anonymous' ? 'border-[#0a3d47] bg-[#0a3d47] text-white' : 'border-gray-200 text-gray-600 hover:border-[#0a3d47]/50'
+                }`}
+              >
+                <EyeOff className="w-4 h-4" /> Keep Me Anonymous
+              </button>
+            </div>
+
             <button className="w-full flex items-center justify-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold py-4 rounded-xl transition-all text-base hover:-translate-y-0.5 shadow-md">
               <Heart className="w-4 h-4" />
               Donate K{custom || selected || '0'} {freq !== 'once' ? `/ ${freq}` : ''}
             </button>
 
             <p className="text-xs text-gray-400 text-center mt-4">Secure payment · 100% goes to programmes · Receipt issued</p>
+
+            {/* Bank & mobile money */}
+            <div className="mt-8 pt-6 border-t border-gray-100">
+              <p className="text-sm font-semibold text-gray-500 mb-3">Prefer a direct transfer?</p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div className="flex items-start gap-3 bg-[#fdfbf8] rounded-xl p-4 border border-gray-100">
+                  <Landmark className="w-5 h-5 text-[#0a3d47] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-sm font-semibold text-[#0d1b2a]">Bank Transfer</p>
+                    <p className="text-xs text-gray-500 mt-1">Account details to follow — <Link href="/contact" className="underline hover:text-[#0a3d47]">contact us</Link> for instructions in the meantime.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 bg-[#fdfbf8] rounded-xl p-4 border border-gray-100">
+                  <Smartphone className="w-5 h-5 text-[#0a3d47] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-sm font-semibold text-[#0d1b2a]">Mobile Money</p>
+                    <p className="text-xs text-gray-500 mt-1">Number to follow — <Link href="/contact" className="underline hover:text-[#0a3d47]">contact us</Link> for instructions in the meantime.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Impact sidebar */}
@@ -133,7 +179,7 @@ export default function SupportPage() {
                 icon: Users,
                 id: 'volunteer',
                 title: 'Volunteer',
-                desc: 'Share your time and skills. We need counsellors, lawyers, educators, drivers, and compassionate humans.',
+                desc: 'Share your time and skills. We need trainers, educators, researchers, drivers, and compassionate humans.',
                 cta: 'Join as Volunteer',
                 href: '/contact?subject=Volunteer',
               },
@@ -150,7 +196,7 @@ export default function SupportPage() {
                 id: 'spread',
                 title: 'Spread the Word',
                 desc: 'Share our work on social media, within your community, and with potential donors. Visibility saves lives.',
-                cta: 'Share Ikhaya Home',
+                cta: 'Share Home-Ikhaya',
                 href: '#',
               },
             ].map(({ icon: Icon, id, title, desc, cta, href }) => (
@@ -174,7 +220,7 @@ export default function SupportPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#0d1b2a] mb-4">Our commitment to transparency</h2>
           <p className="text-gray-600 mb-8">
-            Ikhaya Home is a registered nonprofit in Zambia. We publish annual reports and financial statements. Every donor receives a receipt and impact update.
+            A Place Called Home-Ikhaya is a registered nonprofit in Zambia. We publish annual reports and financial statements. Every donor receives a receipt and impact update, and can choose to be publicly thanked or to remain anonymous.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
             {[
@@ -189,6 +235,12 @@ export default function SupportPage() {
                 <div className="text-xs text-gray-500">{label}</div>
               </div>
             ))}
+          </div>
+          <div className="mt-10 bg-white rounded-2xl p-8 border border-gray-100">
+            <h3 className="font-bold text-[#0d1b2a] mb-2">With Gratitude</h3>
+            <p className="text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
+              As generous supporters like you give, we&apos;ll feature them here — with their permission. Choose &ldquo;Thank Me Publicly&rdquo; when you donate to be included.
+            </p>
           </div>
         </div>
       </section>

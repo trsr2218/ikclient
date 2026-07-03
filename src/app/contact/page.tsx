@@ -34,12 +34,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Emergency banner */}
-      <div className="bg-[#e8a838] py-4 px-4">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-[#0a3d47]">
+      {/* Support banner */}
+      <div className="bg-[#C41E3A] py-4 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-white">
           <Phone className="w-5 h-5 shrink-0" />
           <p className="font-semibold text-center">
-            In immediate danger? Call our 24/7 emergency line:{' '}
+            Need to report a concern urgently? Call our 24/7 support line:{' '}
             <a href="tel:+260966841631" className="underline font-bold">+260 966 841 631</a>
             {' '}or{' '}
             <a href="tel:+260979268260" className="underline font-bold">+260 979 268 260</a>
@@ -168,10 +168,13 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:border-[#0a3d47] focus:ring-1 focus:ring-[#0a3d47] outline-none transition-all bg-white"
                       >
                         <option value="">Select a subject…</option>
+                        <option value="Report a concern">Report a concern</option>
                         <option value="I need help">I need help</option>
+                        <option value="Training">Request church/school/community training</option>
                         <option value="Volunteer">I want to volunteer</option>
                         <option value="Donation">Donation enquiry</option>
                         <option value="Partnership">Partnership opportunity</option>
+                        <option value="Research">Research collaboration</option>
                         <option value="Media">Media enquiry</option>
                         <option value="General">General enquiry</option>
                       </select>

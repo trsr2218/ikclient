@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin, ArrowRight, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Events & Workshops',
-  description: 'Join Ikhaya Home for community workshops, awareness events, and fundraising activities across Zambia.',
+  description: 'Join A Place Called Home-Ikhaya for community workshops, awareness events, and fundraising activities across Zambia.',
 };
 
 const events = [
@@ -16,31 +16,31 @@ const events = [
     location: 'Avondale Community Hall, Lusaka',
     type: 'Workshop',
     typeColor: 'bg-blue-100 text-blue-700',
-    desc: 'A hands-on workshop for community members on recognising signs of gender-based violence, safe reporting pathways, and how to support survivors in your community.',
+    desc: 'A hands-on workshop for community members on recognising signs of sexual violence against children, safe reporting pathways, and how to support survivors — including whistleblower protection.',
     capacity: '40 participants',
     free: true,
   },
   {
     id: 2,
-    title: 'Healing Through Art: Survivor Creative Circle',
+    title: 'Trauma-Informed Care: Church Leader Training',
     date: 'July 22, 2026',
     time: '14:00 – 17:00',
-    location: 'Ikhaya Home Centre, No. 994 Chipilepile Rd',
-    type: 'Healing',
+    location: 'Home-Ikhaya Centre, No. 994 Chipilepile Rd',
+    type: 'Training',
     typeColor: 'bg-rose-100 text-rose-700',
-    desc: 'A safe, facilitated creative session for survivors using art, writing, and music as pathways to emotional expression and healing. Open to current and former clients.',
+    desc: 'Certified training for pastors and church leaders on trauma-informed care and response — equipping the community\'s first responders to support survivors without causing further harm.',
     capacity: '20 participants',
     free: true,
   },
   {
     id: 3,
-    title: 'Legal Rights for Survivors: Information Session',
+    title: 'Know Your Rights: Reporting & Justice Information Session',
     date: 'August 5, 2026',
     time: '10:00 – 12:00',
     location: 'Lusaka Civic Centre',
-    type: 'Legal',
+    type: 'Justice',
     typeColor: 'bg-amber-100 text-amber-700',
-    desc: 'A free public session with our legal team covering survivors\' rights under Zambian law, how to access protection orders, and navigating the criminal justice system.',
+    desc: 'A free public session covering survivors\' rights under Zambian law, how reporting and court escort works, and how to safely and anonymously blow the whistle.',
     capacity: '60 participants',
     free: true,
   },
@@ -52,7 +52,7 @@ const events = [
     location: 'Independence Avenue, Lusaka',
     type: 'Fundraiser',
     typeColor: 'bg-teal-100 text-teal-700',
-    desc: 'Join hundreds of Zambians walking together to raise funds and awareness for gender-based violence prevention. Registration required. All fitness levels welcome.',
+    desc: 'Join hundreds of Zambians walking together to raise funds and awareness for the prevention of sexual violence against children. Registration required. All fitness levels welcome.',
     capacity: 'Open',
     free: false,
     price: 'K50 registration (fundraising)',
@@ -77,7 +77,7 @@ const events = [
     location: 'Taj Pamodzi Hotel, Lusaka',
     type: 'Gala',
     typeColor: 'bg-indigo-100 text-indigo-700',
-    desc: 'Our flagship annual event bringing together supporters, partners, and the community for an evening of music, stories, and fundraising for Ikhaya Home\'s programmes.',
+    desc: 'Our flagship annual event bringing together supporters, partners, and the community for an evening of music, stories, and fundraising for Home-Ikhaya\'s programmes.',
     capacity: '200 guests',
     free: false,
     price: 'K500 per person / K4,500 table of 10',
@@ -96,7 +96,7 @@ export default function EventsPage() {
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-4">Events & Workshops</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5">Get involved. Show up. Make a difference.</h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            From community workshops to fundraising galas, there are many ways to stand with survivors of gender-based violence.
+            From community workshops to fundraising galas, there are many ways to stand with survivors of sexual violence against children.
           </p>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function EventsPage() {
       {/* Host an event CTA */}
       <section className="py-16 px-4 bg-[#0a3d47]">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Want to host an event for Ikhaya Home?</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">Want to host an event for Home-Ikhaya?</h2>
           <p className="text-teal-200 mb-6">We partner with schools, businesses, and community organisations to run awareness and fundraising events across Zambia.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold px-7 py-3 rounded-xl transition-all">
             Get in Touch <ArrowRight className="w-4 h-4" />
