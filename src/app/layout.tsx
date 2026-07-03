@@ -42,31 +42,17 @@ export const metadata: Metadata = {
     title: 'A Place Called Home-Ikhaya: Protecting Children, Ending Sexual Violence',
     description:
       'Awareness, prevention, and response to sexual violence against children in Zambia — training communities, supporting survivors, driving policy change.',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'A Place Called Home-Ikhaya',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'A Place Called Home-Ikhaya',
     description: 'Protecting children. Ending silence. Restoring hope.',
-    images: ['/og-image.jpg'],
   },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
     title: 'Home-Ikhaya',
-  },
-  icons: {
-    icon: '/logo.jpg',
-    apple: '/logo.jpg',
-    shortcut: '/logo.jpg',
   },
 };
 
