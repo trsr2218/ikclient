@@ -120,7 +120,7 @@ const pillars = [
   {
     icon: Shield,
     title: 'Survivor Support',
-    desc: 'Supporting survivors of sexual violence through protection, escort, and advocacy — never victims, always survivors.',
+    desc: 'Supporting survivors of sexual violence through protection, escort, and advocacy, never victims, always survivors.',
     bg: 'bg-[#C41E3A]',
     href: '/services#response',
   },
@@ -254,7 +254,7 @@ export default function HomePage() {
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <Image
             src={`${UNSPLASH}/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=1920&q=85`}
-            alt="A survivor finding strength — A Place Called Home-Ikhaya, Zambia"
+            alt="A survivor finding strength, A Place Called Home-Ikhaya, Zambia"
             fill
             priority
             className="object-cover object-center"
@@ -299,7 +299,7 @@ export default function HomePage() {
             className="text-teal-100/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
           >
             A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response
-            to sexual violence against children — training communities, supporting survivors, and
+            to sexual violence against children: training communities, supporting survivors, and
             driving policy change. We are not a shelter or accommodation provider.
           </motion.p>
 
@@ -373,7 +373,7 @@ export default function HomePage() {
             </h2>
             <p className="text-gray-500 text-lg mb-8 leading-relaxed">
               If a child is at risk, or you know of sexual violence that needs to be reported,
-              confidential support is available — 24 hours a day. Your identity is protected.
+              confidential support is available, 24 hours a day. Your identity is protected.
             </p>
             <div className="bg-white rounded-2xl p-8 shadow-md border border-gray-100 mb-8">
               <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">Call or WhatsApp</p>
@@ -397,7 +397,7 @@ export default function HomePage() {
               href="tel:+260966841631"
               className="inline-flex items-center gap-2 bg-[#C41E3A] hover:bg-[#a51732] text-white font-bold px-10 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg text-base"
             >
-              <Phone className="w-4 h-4" /> Call Now — It&apos;s Free &amp; Confidential
+              <Phone className="w-4 h-4" /> Call Now: It&apos;s Free &amp; Confidential
             </a>
           </FadeUp>
         </div>
@@ -532,7 +532,7 @@ export default function HomePage() {
           <div className="relative min-h-[320px]">
             <Image
               src={`${UNSPLASH}/photo-1511355823905-f042687908eb?auto=format&fit=crop&w=900&q=80`}
-              alt="Children smiling — A Place Called Home-Ikhaya, Zambia"
+              alt="Children smiling, A Place Called Home-Ikhaya, Zambia"
               fill
               className="object-cover object-center"
               sizes="(max-width:1024px) 100vw, 50vw"
@@ -591,7 +591,7 @@ export default function HomePage() {
               <div className="flex-1">
                 <h3 className="font-bold text-xl mb-2">Transparency &amp; Accountability</h3>
                 <p className="text-teal-200 text-sm leading-relaxed">
-                  Home-Ikhaya is committed to responsible, transparent use of all funds. When you donate, you can choose to be publicly thanked or to give anonymously — either way, donations directly support survivor response, training, and prevention programmes. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
+                  Home-Ikhaya is committed to responsible, transparent use of all funds. When you donate, you can choose to be publicly thanked or to give anonymously; either way, donations directly support survivor response, training, and prevention programmes. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
                 </p>
               </div>
               <CheckCircle className="w-12 h-12 text-[#e8a838] shrink-0" />
@@ -634,7 +634,7 @@ export default function HomePage() {
           <div className="relative min-h-[380px]">
             <Image
               src={`${UNSPLASH}/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=900&q=85&crop=faces`}
-              alt="Moomba Thornicroft — Executive Director, A Place Called Home-Ikhaya"
+              alt="Moomba Thornicroft, Executive Director, A Place Called Home-Ikhaya"
               fill
               className="object-cover object-top"
               sizes="(max-width:1024px) 100vw, 50vw"
@@ -719,7 +719,7 @@ export default function HomePage() {
             <p className="text-xl sm:text-2xl font-semibold text-white italic leading-relaxed mb-3">
               &ldquo;Supporting survivors is a shared responsibility. Your generosity helps create safer communities and stronger futures.&rdquo;
             </p>
-            <p className="text-blue-200 text-sm mb-8">Empowering Women — Together We Can Make a Difference</p>
+            <p className="text-blue-200 text-sm mb-8">Empowering Women: Together We Can Make a Difference</p>
             <Link href="/support" className="inline-flex items-center gap-2 bg-[#C41E3A] hover:bg-[#a51732] text-white font-bold px-10 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-xl">
               <Heart className="w-4 h-4" /> DONATE NOW
             </Link>

@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-5 max-w-xs">
-              Awareness, prevention, and response to sexual violence against children in Zambia — training church and community leaders, supporting survivors, and driving policy change. We are not a shelter or accommodation provider.
+              Awareness, prevention, and response to sexual violence against children in Zambia: training church and community leaders, supporting survivors, and driving policy change. We are not a shelter or accommodation provider.
             </p>
 
             {/* Contact */}

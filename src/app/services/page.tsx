@@ -38,7 +38,7 @@ const services = [
     title: 'Capacity Building',
     subtitle: 'Equipping the first responders',
     description:
-      'The church is a key responder to issues in the community, but is often not equipped to handle matters of a sexual nature. We train pastors, church leaders, teachers, and other community leaders in trauma-informed care and response — over 60 pastors trained to date.',
+      'The church is a key responder to issues in the community, but is often not equipped to handle matters of a sexual nature. We train pastors, church leaders, teachers, and other community leaders in trauma-informed care and response, with over 60 pastors trained to date.',
     features: [
       'Trauma-informed care and response training',
       'Training for pastors and church leaders',
@@ -58,7 +58,7 @@ const services = [
     title: 'Survivor Support & Response',
     subtitle: 'Standing with survivors, protecting whistleblowers',
     description:
-      'We support survivors — never victims — in reporting cases to the police, and escort them through the process when they are unable to do it on their own. We also receive whistleblower reports and protect the identity of anyone who comes forward.',
+      'We support survivors, never victims, in reporting cases to the police, and escort them through the process when they are unable to do it on their own. We also receive whistleblower reports and protect the identity of anyone who comes forward.',
     features: [
       'Help reporting cases to the police',
       'Escorting survivors through the reporting process',
@@ -78,7 +78,7 @@ const services = [
     title: 'Justice, Advocacy & Research',
     subtitle: 'Following through until justice is served',
     description:
-      'Our priority is the safety of the survivor first, and then justice. We escort survivors to court, follow up on lost police dockets, and hold the police accountable. Our research arm conducts implementation science and policy-influence research within our field — we helped influence the policy that made sexual offences non-bailable in Zambia.',
+      'Our priority is the safety of the survivor first, and then justice. We escort survivors to court, follow up on lost police dockets, and hold the police accountable. Our research arm conducts implementation science and policy-influence research within our field. We helped influence the policy that made sexual offences non-bailable in Zambia.',
     features: [
       'Court accompaniment for survivors',
       'Follow-up on police dockets and case progress',
@@ -112,7 +112,7 @@ export default function ServicesPage() {
             Holistic protection, every step of the way
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Four interconnected pillars designed to prevent violence, equip responders, support survivors, and pursue justice — we are not a shelter or accommodation provider.
+            Four interconnected pillars designed to prevent violence, equip responders, support survivors, and pursue justice. We are not a shelter or accommodation provider.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {services.map((s) => (

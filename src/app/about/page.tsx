@@ -109,10 +109,10 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-6">From one person&apos;s conviction to a movement</h2>
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                A Place Called Home-Ikhaya began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual violence against children were falling through the cracks of existing systems. There was no integrated support, and often no voice for those who needed it most — including neighbours who suspected abuse but were afraid to come forward.
+                A Place Called Home-Ikhaya began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual violence against children were falling through the cracks of existing systems. There was no integrated support, and often no voice for those who needed it most, including neighbours who suspected abuse but were afraid to come forward.
               </p>
               <p>
-                Starting with a single phone number, Moomba began connecting survivors to reporting support, and training the community leaders who were already trusted first responders — pastors, teachers, and community leaders — through goodwill and determination. Word spread. The need was undeniable.
+                Starting with a single phone number, Moomba began connecting survivors to reporting support, and training the community leaders who were already trusted first responders (pastors, teachers, and community leaders) through goodwill and determination. Word spread. The need was undeniable.
               </p>
               <p>
                 Today, Home-Ikhaya runs school awareness programmes, trains church and community leaders in trauma-informed care, escorts survivors through reporting and justice, and conducts research to influence policy. We have trained over 60 pastors and leaders, and helped influence the policy that made sexual offences non-bailable in Zambia.

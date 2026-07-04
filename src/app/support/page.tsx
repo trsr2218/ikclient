@@ -137,14 +137,14 @@ export default function SupportPage() {
                   <Landmark className="w-5 h-5 text-[#0a3d47] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm font-semibold text-[#0d1b2a]">Bank Transfer</p>
-                    <p className="text-xs text-gray-500 mt-1">Account details to follow — <Link href="/contact" className="underline hover:text-[#0a3d47]">contact us</Link> for instructions in the meantime.</p>
+                    <p className="text-xs text-gray-500 mt-1">Account details to follow soon. <Link href="/contact" className="underline hover:text-[#0a3d47]">Contact us</Link> for instructions in the meantime.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 bg-[#fdfbf8] rounded-xl p-4 border border-gray-100">
                   <Smartphone className="w-5 h-5 text-[#0a3d47] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm font-semibold text-[#0d1b2a]">Mobile Money</p>
-                    <p className="text-xs text-gray-500 mt-1">Number to follow — <Link href="/contact" className="underline hover:text-[#0a3d47]">contact us</Link> for instructions in the meantime.</p>
+                    <p className="text-xs text-gray-500 mt-1">Number to follow soon. <Link href="/contact" className="underline hover:text-[#0a3d47]">Contact us</Link> for instructions in the meantime.</p>
                   </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function SupportPage() {
           <div className="mt-10 bg-white rounded-2xl p-8 border border-gray-100">
             <h3 className="font-bold text-[#0d1b2a] mb-2">With Gratitude</h3>
             <p className="text-sm text-gray-500 leading-relaxed max-w-md mx-auto">
-              As generous supporters like you give, we&apos;ll feature them here — with their permission. Choose &ldquo;Thank Me Publicly&rdquo; when you donate to be included.
+              As generous supporters like you give, we&apos;ll feature them here, with their permission. Choose &ldquo;Thank Me Publicly&rdquo; when you donate to be included.
             </p>
           </div>
         </div>

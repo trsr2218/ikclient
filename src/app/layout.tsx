@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | A Place Called Home-Ikhaya',
   },
   description:
-    'A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response to sexual violence against children — training pastors and educators, supporting survivors, and driving policy change.',
+    'A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response to sexual violence against children: training pastors and educators, supporting survivors, and driving policy change.',
   keywords: [
     'child sexual violence prevention',
     'Zambia',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'A Place Called Home-Ikhaya',
     title: 'A Place Called Home-Ikhaya: Protecting Children, Ending Sexual Violence',
     description:
-      'Awareness, prevention, and response to sexual violence against children in Zambia — training communities, supporting survivors, driving policy change.',
+      'Awareness, prevention, and response to sexual violence against children in Zambia: training communities, supporting survivors, driving policy change.',
   },
   twitter: {
     card: 'summary_large_image',

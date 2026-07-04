@@ -110,7 +110,7 @@ export default function PWAInstall() {
               className="w-full flex items-center justify-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold text-sm px-4 py-3 rounded-xl transition-colors"
             >
               <Download className="w-4 h-4" />
-              Add to Home Screen
+              Download App
             </button>
           )}
         </div>
