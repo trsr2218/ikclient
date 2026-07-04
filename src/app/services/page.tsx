@@ -5,7 +5,7 @@ import { BookOpen, GraduationCap, Heart, Scale, ArrowRight, CheckCircle, Phone }
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'A Place Called Home-Ikhaya provides awareness and prevention education, capacity building for church and community leaders, survivor support, and justice advocacy for children in Zambia.',
+  description: 'A Place Called Home provides awareness and prevention education, capacity building for church and community leaders, survivor support, and justice advocacy for children in Zambia.',
 };
 
 const services = [

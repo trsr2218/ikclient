@@ -196,7 +196,7 @@ export default function SupportPage() {
                 id: 'spread',
                 title: 'Spread the Word',
                 desc: 'Share our work on social media, within your community, and with potential donors. Visibility saves lives.',
-                cta: 'Share Home-Ikhaya',
+                cta: 'Share Ikhaya',
                 href: '#',
               },
             ].map(({ icon: Icon, id, title, desc, cta, href }) => (
@@ -220,7 +220,7 @@ export default function SupportPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#0d1b2a] mb-4">Our commitment to transparency</h2>
           <p className="text-gray-600 mb-8">
-            A Place Called Home-Ikhaya is a registered nonprofit in Zambia. We publish annual reports and financial statements. Every donor receives a receipt and impact update, and can choose to be publicly thanked or to remain anonymous.
+            A Place Called Home is a registered nonprofit in Zambia. We publish annual reports and financial statements. Every donor receives a receipt and impact update, and can choose to be publicly thanked or to remain anonymous.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
             {[

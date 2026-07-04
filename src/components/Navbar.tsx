@@ -63,11 +63,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-white/20 group-hover:ring-white/50 transition-all shrink-0">
-              <Image src="/logo.jpg" alt="A Place Called Home-Ikhaya Logo" width={40} height={40} className="object-cover w-full h-full" />
+              <Image src="/logo.jpg" alt="A Place Called Home Logo" width={40} height={40} className="object-cover w-full h-full" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-teal-200 text-[10px] uppercase tracking-widest leading-none block">A Place Called</span>
-              <span className="font-bold text-white text-lg leading-tight block">Home-Ikhaya</span>
+              <span className="font-bold text-white text-base leading-tight block">A Place Called Home</span>
+              <span className="text-teal-300 text-[10px] uppercase tracking-widest leading-none block mt-0.5">Ikhaya</span>
             </div>
           </Link>
 

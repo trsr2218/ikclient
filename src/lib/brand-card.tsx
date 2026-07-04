@@ -51,11 +51,23 @@ export async function renderBrandCard() {
             fontWeight: 700,
             color: '#ffffff',
             lineHeight: 1.15,
-            marginBottom: 24,
+            marginBottom: 12,
           }}
         >
           <span>A Place Called</span>
-          <span>Home-Ikhaya</span>
+          <span>Home</span>
+        </div>
+        <div
+          style={{
+            fontSize: 22,
+            fontWeight: 600,
+            letterSpacing: 3,
+            textTransform: 'uppercase',
+            color: '#7fb8c4',
+            marginBottom: 24,
+          }}
+        >
+          Ikhaya
         </div>
         <div
           style={{

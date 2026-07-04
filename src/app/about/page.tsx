@@ -5,7 +5,7 @@ import { ArrowRight, Heart, Shield, Users, Target, Eye, Award } from 'lucide-rea
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about A Place Called Home-Ikhaya: our mission, history, team, and values guiding our work on awareness, prevention, and response to sexual violence against children in Zambia.',
+  description: 'Learn about A Place Called Home: our mission, history, team, and values guiding our work on awareness, prevention, and response to sexual violence against children in Zambia.',
 };
 
 const values = [
@@ -19,7 +19,7 @@ const team = [
   {
     name: 'Moomba Thornicroft',
     role: 'Founder & Executive Director',
-    bio: 'With over 10 years of public health expertise in adolescent health, Moomba founded A Place Called Home-Ikhaya to fill a critical gap in the prevention of and response to sexual violence against children in Zambia.',
+    bio: 'With over 10 years of public health expertise in adolescent health, Moomba founded A Place Called Home to fill a critical gap in the prevention of and response to sexual violence against children in Zambia.',
     initials: 'MT',
   },
   {
@@ -43,7 +43,7 @@ const team = [
 ];
 
 const milestones = [
-  { year: '2014', event: 'A Place Called Home-Ikhaya founded by Moomba Thornicroft in Lusaka' },
+  { year: '2014', event: 'A Place Called Home founded by Moomba Thornicroft in Lusaka' },
   { year: '2016', event: 'Launched school-based awareness programme on child safety and consent' },
   { year: '2018', event: 'Began training church leaders and pastors in trauma-informed care and response' },
   { year: '2020', event: 'Played a leading role in the policy advocacy that made sexual offences non-bailable in Zambia' },
@@ -72,7 +72,7 @@ export default function AboutPage() {
             Built on belief. Driven by purpose.
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            A Place Called Home-Ikhaya was born from a simple conviction: that every child in Zambia deserves to live free from sexual violence, fear, and silence. We are not a shelter or accommodation provider.
+            A Place Called Home was born from a simple conviction: that every child in Zambia deserves to live free from sexual violence, fear, and silence. We are not a shelter or accommodation provider.
           </p>
         </div>
       </section>
@@ -109,13 +109,13 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-6">From one person&apos;s conviction to a movement</h2>
             <div className="space-y-5 text-gray-600 leading-relaxed">
               <p>
-                A Place Called Home-Ikhaya began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual violence against children were falling through the cracks of existing systems. There was no integrated support, and often no voice for those who needed it most, including neighbours who suspected abuse but were afraid to come forward.
+                A Place Called Home began in 2014 when Moomba Thornicroft, working in adolescent public health, saw firsthand how survivors of sexual violence against children were falling through the cracks of existing systems. There was no integrated support, and often no voice for those who needed it most, including neighbours who suspected abuse but were afraid to come forward.
               </p>
               <p>
                 Starting with a single phone number, Moomba began connecting survivors to reporting support, and training the community leaders who were already trusted first responders (pastors, teachers, and community leaders) through goodwill and determination. Word spread. The need was undeniable.
               </p>
               <p>
-                Today, Home-Ikhaya runs school awareness programmes, trains church and community leaders in trauma-informed care, escorts survivors through reporting and justice, and conducts research to influence policy. We have trained over 60 pastors and leaders, and helped influence the policy that made sexual offences non-bailable in Zambia.
+                Today, Ikhaya runs school awareness programmes, trains church and community leaders in trauma-informed care, escorts survivors through reporting and justice, and conducts research to influence policy. We have trained over 60 pastors and leaders, and helped influence the policy that made sexual offences non-bailable in Zambia.
               </p>
               <p className="font-medium text-[#0a3d47]">
                 The work is far from over. Every day, survivors and whistleblowers reach out. Every day, we answer.

@@ -109,7 +109,7 @@ const testimonials = [
     name: 'Teacher, Partner School', location: 'Copperbelt', stars: 5,
   },
   {
-    quote: 'I was scared to report what I knew. Home-Ikhaya protected my identity and made sure the child was safe. I would do it again.',
+    quote: 'I was scared to report what I knew. Ikhaya protected my identity and made sure the child was safe. I would do it again.',
     name: 'Community Whistleblower', location: 'Lusaka', stars: 5,
   },
 ];
@@ -254,7 +254,7 @@ export default function HomePage() {
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <Image
             src={`${UNSPLASH}/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=1920&q=85`}
-            alt="A survivor finding strength, A Place Called Home-Ikhaya, Zambia"
+            alt="A survivor finding strength, A Place Called Home, Zambia"
             fill
             priority
             className="object-cover object-center"
@@ -286,7 +286,7 @@ export default function HomePage() {
           >
             A Place Called{' '}
             <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
-              Home-Ikhaya
+              Home
             </span>{' '}
             <br className="hidden sm:block" />
             for Every Child&apos;s Safety
@@ -298,7 +298,7 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-teal-100/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response
+            A Place Called Home works across Zambia on awareness, prevention, and response
             to sexual violence against children: training communities, supporting survivors, and
             driving policy change. We are not a shelter or accommodation provider.
           </motion.p>
@@ -465,7 +465,7 @@ export default function HomePage() {
               Preventing violence. Protecting children. Restoring dignity.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Founded by Moomba Thornicroft with over a decade of public health expertise, A Place Called Home-Ikhaya was built on the belief that every child in Zambia deserves to live free from sexual violence and silence.
+              Founded by Moomba Thornicroft with over a decade of public health expertise, A Place Called Home was built on the belief that every child in Zambia deserves to live free from sexual violence and silence.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               We combine awareness, training, and survivor-centred response because ending sexual violence against children takes a whole community, and we walk every step of it alongside those we serve.
@@ -532,7 +532,7 @@ export default function HomePage() {
           <div className="relative min-h-[320px]">
             <Image
               src={`${UNSPLASH}/photo-1511355823905-f042687908eb?auto=format&fit=crop&w=900&q=80`}
-              alt="Children smiling, A Place Called Home-Ikhaya, Zambia"
+              alt="Children smiling, A Place Called Home, Zambia"
               fill
               className="object-cover object-center"
               sizes="(max-width:1024px) 100vw, 50vw"
@@ -553,7 +553,7 @@ export default function HomePage() {
           <FadeUp delay={0.15}>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
               Children who experience sexual violence often face silence, stigma, and systems that are not
-              equipped to respond. Your donation helps Home-Ikhaya respond with dignity, compassion, and
+              equipped to respond. Your donation helps Ikhaya respond with dignity, compassion, and
               survivor-centred care.
             </p>
             <p className="text-gray-300 leading-relaxed text-lg">
@@ -591,7 +591,7 @@ export default function HomePage() {
               <div className="flex-1">
                 <h3 className="font-bold text-xl mb-2">Transparency &amp; Accountability</h3>
                 <p className="text-teal-200 text-sm leading-relaxed">
-                  Home-Ikhaya is committed to responsible, transparent use of all funds. When you donate, you can choose to be publicly thanked or to give anonymously; either way, donations directly support survivor response, training, and prevention programmes. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
+                  Ikhaya is committed to responsible, transparent use of all funds. When you donate, you can choose to be publicly thanked or to give anonymously; either way, donations directly support survivor response, training, and prevention programmes. If you would like more information about how funds are used, please <Link href="/contact" className="underline hover:text-[#e8a838] transition-colors">contact us</Link>.
                 </p>
               </div>
               <CheckCircle className="w-12 h-12 text-[#e8a838] shrink-0" />
@@ -613,10 +613,10 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-[#0d1b2a] mb-1 leading-tight">Moomba Thornicroft</h2>
               <p className="text-[#e8a838] font-semibold italic mb-6">Founder &amp; Executive Director</p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Moomba Mbolongwe Thornicroft is the Founder and Executive Director of A Place Called Home-Ikhaya, a woman-led organisation responding to sexual violence against children in Zambia. A trained public health specialist with over 10 years of experience, she has worked extensively with adolescents, communities, and health systems.
+                Moomba Mbolongwe Thornicroft is the Founder and Executive Director of A Place Called Home, a woman-led organisation responding to sexual violence against children in Zambia. A trained public health specialist with over 10 years of experience, she has worked extensively with adolescents, communities, and health systems.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Growing up in Zambia, Moomba saw how violence against children thrives in silence. That reality shaped her commitment to building Home-Ikhaya as a place of safety, awareness, and justice for children and survivors. She has been nominated for a humanitarian award in recognition of this work.
+                Growing up in Zambia, Moomba saw how violence against children thrives in silence. That reality shaped her commitment to building Ikhaya as a place of safety, awareness, and justice for children and survivors. She has been nominated for a humanitarian award in recognition of this work.
               </p>
               <div className="flex items-center gap-3">
                 {(['Facebook', 'LinkedIn', 'Instagram'] as const).map((label) => (
@@ -634,7 +634,7 @@ export default function HomePage() {
           <div className="relative min-h-[380px]">
             <Image
               src={`${UNSPLASH}/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=900&q=85&crop=faces`}
-              alt="Moomba Thornicroft, Executive Director, A Place Called Home-Ikhaya"
+              alt="Moomba Thornicroft, Executive Director, A Place Called Home"
               fill
               className="object-cover object-top"
               sizes="(max-width:1024px) 100vw, 50vw"

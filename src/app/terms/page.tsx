@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
-  description: 'Terms and conditions for using the A Place Called Home-Ikhaya website and services.',
+  description: 'Terms and conditions for using the A Place Called Home website and services.',
 };
 
 export default function TermsPage() {
@@ -19,15 +19,15 @@ export default function TermsPage() {
           {[
             {
               title: '1. Acceptance of Terms',
-              body: 'By accessing or using the A Place Called Home-Ikhaya website (www.ikhayahome.com), you agree to be bound by these Terms and Conditions. If you do not agree, please do not use this website.',
+              body: 'By accessing or using the A Place Called Home website (www.ikhayahome.com), you agree to be bound by these Terms and Conditions. If you do not agree, please do not use this website.',
             },
             {
-              title: '2. About A Place Called Home-Ikhaya',
-              body: 'A Place Called Home-Ikhaya is a registered nonprofit organisation in Zambia focused on awareness, prevention, and response to sexual violence against children. We are not a shelter or accommodation provider. Our services are free of charge to all clients.',
+              title: '2. About A Place Called Home',
+              body: 'A Place Called Home is a registered nonprofit organisation in Zambia focused on awareness, prevention, and response to sexual violence against children. We are not a shelter or accommodation provider. Our services are free of charge to all clients.',
             },
             {
               title: '3. Use of This Website',
-              body: 'This website is intended for informational purposes and to facilitate contact with our services. You may not use this website for any unlawful purpose or in any way that could harm Home-Ikhaya or the people we serve.',
+              body: 'This website is intended for informational purposes and to facilitate contact with our services. You may not use this website for any unlawful purpose or in any way that could harm Ikhaya or the people we serve.',
             },
             {
               title: '4. Confidentiality',
@@ -35,7 +35,7 @@ export default function TermsPage() {
             },
             {
               title: '5. Donations',
-              body: 'All donations made through this website are voluntary and non-refundable. Home-Ikhaya is committed to using donations exclusively for its stated programmes. Donors may choose to be publicly acknowledged or to remain anonymous. Financial reports are available on request.',
+              body: 'All donations made through this website are voluntary and non-refundable. Ikhaya is committed to using donations exclusively for its stated programmes. Donors may choose to be publicly acknowledged or to remain anonymous. Financial reports are available on request.',
             },
             {
               title: '6. Disclaimer',
@@ -43,11 +43,11 @@ export default function TermsPage() {
             },
             {
               title: '7. Intellectual Property',
-              body: 'All content, logos, and materials on this website are the property of A Place Called Home-Ikhaya and may not be reproduced without prior written permission.',
+              body: 'All content, logos, and materials on this website are the property of A Place Called Home and may not be reproduced without prior written permission.',
             },
             {
               title: '8. Changes to These Terms',
-              body: 'Home-Ikhaya reserves the right to update these Terms at any time. Continued use of the website following any changes constitutes your acceptance of the revised Terms.',
+              body: 'Ikhaya reserves the right to update these Terms at any time. Continued use of the website following any changes constitutes your acceptance of the revised Terms.',
             },
             {
               title: '9. Contact',

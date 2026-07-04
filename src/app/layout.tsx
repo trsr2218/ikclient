@@ -14,11 +14,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'A Place Called Home-Ikhaya: Protecting Children, Ending Sexual Violence',
-    template: '%s | A Place Called Home-Ikhaya',
+    default: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
+    template: '%s | A Place Called Home',
   },
   description:
-    'A Place Called Home-Ikhaya works across Zambia on awareness, prevention, and response to sexual violence against children: training pastors and educators, supporting survivors, and driving policy change.',
+    'A Place Called Home works across Zambia on awareness, prevention, and response to sexual violence against children: training pastors and educators, supporting survivors, and driving policy change.',
   keywords: [
     'child sexual violence prevention',
     'Zambia',
@@ -28,31 +28,31 @@ export const metadata: Metadata = {
     'whistleblower reporting',
     'nonprofit',
     'Lusaka',
-    'A Place Called Home-Ikhaya',
+    'A Place Called Home',
   ],
-  authors: [{ name: 'A Place Called Home-Ikhaya' }],
-  creator: 'A Place Called Home-Ikhaya',
-  publisher: 'A Place Called Home-Ikhaya',
+  authors: [{ name: 'A Place Called Home' }],
+  creator: 'A Place Called Home',
+  publisher: 'A Place Called Home',
   metadataBase: new URL('https://www.ikhayahome.com'),
   openGraph: {
     type: 'website',
     locale: 'en_ZM',
     url: 'https://www.ikhayahome.com',
-    siteName: 'A Place Called Home-Ikhaya',
-    title: 'A Place Called Home-Ikhaya: Protecting Children, Ending Sexual Violence',
+    siteName: 'A Place Called Home',
+    title: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
     description:
       'Awareness, prevention, and response to sexual violence against children in Zambia: training communities, supporting survivors, driving policy change.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A Place Called Home-Ikhaya',
+    title: 'A Place Called Home',
     description: 'Protecting children. Ending silence. Restoring hope.',
   },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Home-Ikhaya',
+    title: 'Ikhaya',
   },
 };
 

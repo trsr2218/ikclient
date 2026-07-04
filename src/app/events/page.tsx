@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin, ArrowRight, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Events & Workshops',
-  description: 'Join A Place Called Home-Ikhaya for community workshops, awareness events, and fundraising activities across Zambia.',
+  description: 'Join A Place Called Home for community workshops, awareness events, and fundraising activities across Zambia.',
 };
 
 const events = [
@@ -25,7 +25,7 @@ const events = [
     title: 'Trauma-Informed Care: Church Leader Training',
     date: 'July 22, 2026',
     time: '14:00 – 17:00',
-    location: 'Home-Ikhaya Centre, No. 994 Chipilepile Rd',
+    location: 'Ikhaya Centre, No. 994 Chipilepile Rd',
     type: 'Training',
     typeColor: 'bg-rose-100 text-rose-700',
     desc: 'Certified training for pastors and church leaders on trauma-informed care and response, equipping the community\'s first responders to support survivors without causing further harm.',
@@ -77,7 +77,7 @@ const events = [
     location: 'Taj Pamodzi Hotel, Lusaka',
     type: 'Gala',
     typeColor: 'bg-indigo-100 text-indigo-700',
-    desc: 'Our flagship annual event bringing together supporters, partners, and the community for an evening of music, stories, and fundraising for Home-Ikhaya\'s programmes.',
+    desc: 'Our flagship annual event bringing together supporters, partners, and the community for an evening of music, stories, and fundraising for Ikhaya\'s programmes.',
     capacity: '200 guests',
     free: false,
     price: 'K500 per person / K4,500 table of 10',
@@ -190,7 +190,7 @@ export default function EventsPage() {
       {/* Host an event CTA */}
       <section className="py-16 px-4 bg-[#0a3d47]">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Want to host an event for Home-Ikhaya?</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">Want to host an event for Ikhaya?</h2>
           <p className="text-teal-200 mb-6">We partner with schools, businesses, and community organisations to run awareness and fundraising events across Zambia.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-[#e8a838] hover:bg-[#f0be68] text-[#0a3d47] font-bold px-7 py-3 rounded-xl transition-all">
             Get in Touch <ArrowRight className="w-4 h-4" />
