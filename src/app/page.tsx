@@ -285,7 +285,7 @@ export default function HomePage() {
             className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-6"
           >
             A Place Called{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
+            <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
               Home-Ikhaya
             </span>{' '}
             <br className="hidden sm:block" />

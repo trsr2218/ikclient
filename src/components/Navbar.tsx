@@ -22,10 +22,8 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const pathname = usePathname();
-  const isHome = pathname === '/';
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -44,18 +42,10 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
-  }, []);
-
-  useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  const navBg = isHome && !scrolled
-    ? 'bg-transparent'
-    : 'bg-[#0a3d47]/95 backdrop-blur-md shadow-lg shadow-black/10';
+  const navBg = 'bg-[#0a3d47]/95 backdrop-blur-md shadow-lg shadow-black/10';
 
   return (
     <>
