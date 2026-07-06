@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-4 group">
               <div className="w-12 h-12 rounded-xl overflow-hidden ring-1 ring-white/20 shrink-0">
-                <Image src="/logo.jpg" alt="A Place Called Home Logo" width={48} height={48} className="object-cover w-full h-full" />
+                <Image src="/icons/icon-192.png" alt="A Place Called Home Logo" width={48} height={48} className="object-cover w-full h-full" />
               </div>
               <div>
                 <span className="font-bold text-white text-xl block leading-none">A Place Called Home</span>

@@ -63,7 +63,7 @@ const services = [
     title: 'Awareness & Prevention',
     desc: 'School programmes that teach children about good, bad, and uncomfortable touch, consent, and who a trusted adult is.',
     href: '/services#awareness',
-    img: `${UNSPLASH}/photo-1526413232644-8a40f03cc03b?auto=format&fit=crop&w=600&q=75`,
+    img: `${UNSPLASH}/photo-1632215861513-130b66fe97f4?auto=format&fit=crop&w=600&q=75`,
     color: 'from-blue-900/80',
   },
   {
@@ -79,7 +79,7 @@ const services = [
     title: 'Survivor Support & Response',
     desc: 'Helping survivors report cases, escorting them through the process, and protecting whistleblowers who speak up.',
     href: '/services#response',
-    img: `${UNSPLASH}/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=75`,
+    img: `${UNSPLASH}/photo-1505421031134-e57263cae630?auto=format&fit=crop&w=600&q=75`,
     color: 'from-rose-900/80',
   },
   {
@@ -120,7 +120,7 @@ const pillars = [
   {
     icon: Shield,
     title: 'Survivor Support',
-    desc: 'Supporting survivors of sexual violence through protection, escort, and advocacy, never victims, always survivors.',
+    desc: 'Supporting survivors of sexual violence through protection, escort, and advocacy: always with dignity, always as survivors.',
     bg: 'bg-[#C41E3A]',
     href: '/services#response',
   },
@@ -253,7 +253,7 @@ export default function HomePage() {
       <section ref={heroRef} className="relative min-h-[95vh] flex flex-col items-center justify-center overflow-hidden">
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <Image
-            src={`${UNSPLASH}/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&w=1920&q=85`}
+            src={`${UNSPLASH}/photo-1508205065970-cad01cebebb4?auto=format&fit=crop&w=1920&q=85`}
             alt="A survivor finding strength, A Place Called Home, Zambia"
             fill
             priority
@@ -499,7 +499,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-3 gap-3 h-52 sm:h-72">
           {[
             { src: `${UNSPLASH}/photo-1610883144013-7a76f77250b6?auto=format&fit=crop&w=800&q=75`, alt: 'Women in community' },
-            { src: `${UNSPLASH}/photo-1594824388863-547afea8b9b2?auto=format&fit=crop&w=800&q=75`, alt: 'Support and healing' },
+            { src: `${UNSPLASH}/photo-1515657834497-26509e295154?auto=format&fit=crop&w=800&q=75`, alt: 'Support and healing' },
             { src: `${UNSPLASH}/photo-1632427511436-7a95c93ba64c?auto=format&fit=crop&w=800&q=75`, alt: 'Community empowerment' },
           ].map(({ src, alt }, i) => (
             <FadeUp key={i} delay={i * 0.1} className="relative overflow-hidden rounded-2xl">
@@ -633,7 +633,7 @@ export default function HomePage() {
           {/* Right: photo */}
           <div className="relative min-h-[380px]">
             <Image
-              src={`${UNSPLASH}/photo-1589156229687-496a31ad1d1f?auto=format&fit=crop&w=900&q=85&crop=faces`}
+              src="/team/moomba-thornicroft.jpg"
               alt="Moomba Thornicroft, Executive Director, A Place Called Home"
               fill
               className="object-cover object-top"

@@ -12,6 +12,11 @@ const inter = Inter({
   display: 'swap',
 });
 
+// www.ikhayahome.com currently still serves the client's old Wix site, not this build.
+// Point metadata at the live deployment until DNS for the real domain is cut over,
+// then set NEXT_PUBLIC_SITE_URL (or update this fallback) to the real domain.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ikclient.vercel.app';
+
 export const metadata: Metadata = {
   title: {
     default: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
@@ -33,11 +38,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'A Place Called Home' }],
   creator: 'A Place Called Home',
   publisher: 'A Place Called Home',
-  metadataBase: new URL('https://www.ikhayahome.com'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: 'website',
     locale: 'en_ZM',
-    url: 'https://www.ikhayahome.com',
+    url: SITE_URL,
     siteName: 'A Place Called Home',
     title: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
     description:

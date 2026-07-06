@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, Heart, Phone, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -22,6 +23,7 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const pathname = usePathname();
 
@@ -32,6 +34,13 @@ export default function Navbar() {
     };
     window.addEventListener('beforeinstallprompt', handler);
     return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleInstall = async () => {
@@ -45,7 +54,9 @@ export default function Navbar() {
     setOpen(false);
   }, [pathname]);
 
-  const navBg = 'bg-[#0a3d47]/95 backdrop-blur-md shadow-lg shadow-black/10';
+  const navBg = scrolled
+    ? 'bg-[#0a3d47]/95 backdrop-blur-md shadow-lg shadow-black/20'
+    : 'bg-[#0a3d47]/95 backdrop-blur-md shadow-none';
 
   return (
     <>
@@ -63,7 +74,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-white/20 group-hover:ring-white/50 transition-all shrink-0">
-              <Image src="/logo.jpg" alt="A Place Called Home Logo" width={40} height={40} className="object-cover w-full h-full" />
+              <Image src="/icons/icon-192.png" alt="A Place Called Home Logo" width={40} height={40} className="object-cover w-full h-full" />
             </div>
             <div className="hidden sm:block">
               <span className="font-bold text-white text-base leading-tight block">A Place Called Home</span>
@@ -126,48 +137,58 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile menu */}
-        {open && (
-          <div className="lg:hidden bg-[#0a3d47] border-t border-white/10 px-4 py-4 space-y-1">
-            {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={cn(
-                  'block px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-                  pathname === href
-                    ? 'bg-white/15 text-white'
-                    : 'text-teal-100 hover:bg-white/10 hover:text-white'
-                )}
-              >
-                {label}
-              </Link>
-            ))}
-            <div className="pt-3 flex flex-col gap-2">
-              {installPrompt && (
-                <button
-                  onClick={handleInstall}
-                  className="flex items-center justify-center gap-1.5 bg-white/10 border border-teal-400/40 text-teal-100 font-semibold text-sm px-4 py-3 rounded-lg w-full"
-                >
-                  <Download className="w-4 h-4" />
-                  Install App
-                </button>
-              )}
-              <Link
-                href="/book"
-                className="block text-center text-sm font-medium border border-teal-400/40 text-teal-100 px-4 py-3 rounded-lg"
-              >
-                Book Appointment
-              </Link>
-              <Link
-                href="/support"
-                className="flex items-center justify-center gap-1.5 bg-[#e8a838] text-[#0a3d47] font-semibold text-sm px-4 py-3 rounded-lg"
-              >
-                <Heart className="w-3.5 h-3.5" />
-                Donate Now
-              </Link>
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:hidden bg-[#0a3d47] border-t border-white/10 overflow-hidden"
+            >
+              <div className="px-4 py-4 space-y-1">
+                {links.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className={cn(
+                      'block px-4 py-3 rounded-lg text-sm font-medium transition-colors',
+                      pathname === href
+                        ? 'bg-white/15 text-white'
+                        : 'text-teal-100 hover:bg-white/10 hover:text-white'
+                    )}
+                  >
+                    {label}
+                  </Link>
+                ))}
+                <div className="pt-3 flex flex-col gap-2">
+                  {installPrompt && (
+                    <button
+                      onClick={handleInstall}
+                      className="flex items-center justify-center gap-1.5 bg-white/10 border border-teal-400/40 text-teal-100 font-semibold text-sm px-4 py-3 rounded-lg w-full"
+                    >
+                      <Download className="w-4 h-4" />
+                      Install App
+                    </button>
+                  )}
+                  <Link
+                    href="/book"
+                    className="block text-center text-sm font-medium border border-teal-400/40 text-teal-100 px-4 py-3 rounded-lg"
+                  >
+                    Book Appointment
+                  </Link>
+                  <Link
+                    href="/support"
+                    className="flex items-center justify-center gap-1.5 bg-[#e8a838] text-[#0a3d47] font-semibold text-sm px-4 py-3 rounded-lg"
+                  >
+                    <Heart className="w-3.5 h-3.5" />
+                    Donate Now
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </>
   );

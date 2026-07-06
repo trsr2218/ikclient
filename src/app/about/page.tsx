@@ -21,6 +21,7 @@ const team = [
     role: 'Founder & Executive Director',
     bio: 'With over 10 years of public health expertise in adolescent health, Moomba founded A Place Called Home to fill a critical gap in the prevention of and response to sexual violence against children in Zambia.',
     initials: 'MT',
+    photo: '/team/moomba-thornicroft.jpg',
   },
   {
     name: 'Programme Director',
@@ -190,11 +191,17 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-[#0d1b2a]">The Team Behind the Mission</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map(({ name, role, bio, initials }) => (
+            {team.map(({ name, role, bio, initials, photo }) => (
               <div key={name} className="bg-[#fdfbf8] rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0a3d47] to-[#146a82] flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
-                  {initials}
-                </div>
+                {photo ? (
+                  <div className="relative w-16 h-16 rounded-2xl overflow-hidden mb-4 mx-auto">
+                    <Image src={photo} alt={name} fill className="object-cover object-top" sizes="64px" />
+                  </div>
+                ) : (
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0a3d47] to-[#146a82] flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
+                    {initials}
+                  </div>
+                )}
                 <h3 className="font-bold text-[#0d1b2a] text-center mb-0.5">{name}</h3>
                 <p className="text-[#e8a838] text-xs font-semibold text-center mb-3">{role}</p>
                 <p className="text-xs text-gray-500 leading-relaxed text-center">{bio}</p>

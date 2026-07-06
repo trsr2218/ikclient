@@ -69,7 +69,7 @@ export default function PWAInstall() {
         {/* Header */}
         <div className="flex items-center gap-3 px-4 pt-4 pb-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.jpg" alt="Ikhaya" className="w-10 h-10 rounded-xl object-cover shrink-0" />
+          <img src="/icons/icon-192.png" alt="Ikhaya" className="w-10 h-10 rounded-xl object-cover shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="font-bold text-sm leading-tight">Install Ikhaya</p>
             <p className="text-teal-300 text-xs mt-0.5">Access offline · Fast · No app store needed</p>

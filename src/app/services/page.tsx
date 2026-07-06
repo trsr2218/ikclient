@@ -58,7 +58,7 @@ const services = [
     title: 'Survivor Support & Response',
     subtitle: 'Standing with survivors, protecting whistleblowers',
     description:
-      'We support survivors, never victims, in reporting cases to the police, and escort them through the process when they are unable to do it on their own. We also receive whistleblower reports and protect the identity of anyone who comes forward.',
+      'We support survivors with dignity in reporting cases to the police, and escort them through the process when they are unable to do it on their own. We also receive whistleblower reports and protect the identity of anyone who comes forward.',
     features: [
       'Help reporting cases to the police',
       'Escorting survivors through the reporting process',
@@ -97,7 +97,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="relative py-32 px-4 overflow-hidden min-h-[50vh] flex items-center">
         <Image
-          src="https://images.unsplash.com/photo-1673530703485-f04a5af6ab1a?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1524414621493-7dec026782c3?auto=format&fit=crop&w=1920&q=80"
           alt="Support and healing"
           fill
           priority
