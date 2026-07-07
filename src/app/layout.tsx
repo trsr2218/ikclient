@@ -19,8 +19,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://ikclient.vercel.ap
 
 export const metadata: Metadata = {
   title: {
-    default: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
-    template: '%s | A Place Called Home',
+    default: 'A Place Called Home - Ikhaya: Protecting Children, Ending Sexual Violence',
+    template: '%s | A Place Called Home - Ikhaya',
   },
   description:
     'A Place Called Home works across Zambia on awareness, prevention, and response to sexual violence against children: training pastors and educators, supporting survivors, and driving policy change.',
@@ -35,22 +35,22 @@ export const metadata: Metadata = {
     'Lusaka',
     'A Place Called Home',
   ],
-  authors: [{ name: 'A Place Called Home' }],
-  creator: 'A Place Called Home',
-  publisher: 'A Place Called Home',
+  authors: [{ name: 'A Place Called Home - Ikhaya' }],
+  creator: 'A Place Called Home - Ikhaya',
+  publisher: 'A Place Called Home - Ikhaya',
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: 'website',
     locale: 'en_ZM',
     url: SITE_URL,
-    siteName: 'A Place Called Home',
-    title: 'A Place Called Home: Protecting Children, Ending Sexual Violence',
+    siteName: 'A Place Called Home - Ikhaya',
+    title: 'A Place Called Home - Ikhaya: Protecting Children, Ending Sexual Violence',
     description:
       'Awareness, prevention, and response to sexual violence against children in Zambia: training communities, supporting survivors, driving policy change.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A Place Called Home',
+    title: 'A Place Called Home - Ikhaya',
     description: 'Protecting children. Ending silence. Restoring hope.',
   },
   manifest: '/manifest.json',

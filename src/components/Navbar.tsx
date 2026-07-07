@@ -78,7 +78,7 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <span className="font-bold text-white text-base leading-tight block">A Place Called Home</span>
-              <span className="text-teal-300 text-[10px] uppercase tracking-widest leading-none block mt-0.5">Ikhaya</span>
+              <span className="text-teal-300 text-[10px] uppercase tracking-widest leading-none block mt-0.5">- Ikhaya</span>
             </div>
           </Link>
 

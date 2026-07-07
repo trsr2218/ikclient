@@ -67,7 +67,7 @@ export async function renderBrandCard() {
             marginBottom: 24,
           }}
         >
-          Ikhaya
+          - Ikhaya
         </div>
         <div
           style={{

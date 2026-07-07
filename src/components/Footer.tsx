@@ -55,7 +55,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-white text-xl block leading-none">A Place Called Home</span>
-                <span className="text-teal-300 text-[10px] uppercase tracking-widest block mt-1">Ikhaya</span>
+                <span className="text-teal-300 text-[10px] uppercase tracking-widest block mt-1">- Ikhaya</span>
                 <span className="text-teal-400 text-xs block mt-1">Awareness · Prevention · Response</span>
               </div>
             </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5 py-5 px-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} A Place Called Home. All rights reserved. Registered Nonprofit: Zambia.</p>
+          <p>&copy; {new Date().getFullYear()} A Place Called Home - Ikhaya. All rights reserved. Registered Nonprofit: Zambia.</p>
           <p className="flex items-center gap-1">
             Made with <Heart className="w-3 h-3 text-red-400 mx-0.5" /> for children
           </p>
