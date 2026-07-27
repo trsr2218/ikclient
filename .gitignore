@@ -42,3 +42,6 @@ next-env.d.ts
 
 # sensitive client recordings (not for version control)
 src/assets/*.m4a
+
+.vercel
+.env*

@@ -275,7 +275,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-teal-100 text-xs font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm"
           >
             <Shield className="w-3.5 h-3.5 text-[#e8a838]" />
-            Serving Zambia since 2014
+            Serving since 2022
           </motion.div>
 
           <motion.h1
@@ -300,7 +300,7 @@ export default function HomePage() {
           >
             A Place Called Home works across Zambia on awareness, prevention, and response
             to sexual violence against children: training communities, supporting survivors, and
-            driving policy change. We are not a shelter or accommodation provider.
+            driving policy change.
           </motion.p>
 
           <motion.div

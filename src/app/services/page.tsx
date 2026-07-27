@@ -112,7 +112,7 @@ export default function ServicesPage() {
             Holistic protection, every step of the way
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Four interconnected pillars designed to prevent violence, equip responders, support survivors, and pursue justice. We are not a shelter or accommodation provider.
+            Four interconnected pillars designed to prevent violence, equip responders, support survivors, and pursue justice.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {services.map((s) => (

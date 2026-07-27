@@ -23,7 +23,7 @@ export default function TermsPage() {
             },
             {
               title: '2. About A Place Called Home',
-              body: 'A Place Called Home is a registered nonprofit organisation in Zambia focused on awareness, prevention, and response to sexual violence against children. We are not a shelter or accommodation provider. Our services are free of charge to all clients.',
+              body: 'A Place Called Home is a registered nonprofit organisation in Zambia focused on awareness, prevention, and response to sexual violence against children. Our services are free of charge to all clients.',
             },
             {
               title: '3. Use of This Website',

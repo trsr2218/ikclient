@@ -73,7 +73,7 @@ export default function AboutPage() {
             Built on belief. Driven by purpose.
           </h1>
           <p className="text-teal-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            A Place Called Home was born from a simple conviction: that every child in Zambia deserves to live free from sexual violence, fear, and silence. We are not a shelter or accommodation provider.
+            A Place Called Home was born from a simple conviction: that every child in Zambia deserves to live free from sexual violence, fear, and silence.
           </p>
         </div>
       </section>
