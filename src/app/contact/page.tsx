@@ -4,20 +4,39 @@ import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
+// Messages are delivered over WhatsApp to the 24/7 support line; there is no
+// server-side inbox, so the wa.me handoff (with a mailto fallback) IS the submission.
+const ORG_WHATSAPP = '260966841631';
+const ORG_EMAIL = 'ikhayahome@outlook.com';
+
 export default function ContactPage() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const buildMessage = () =>
+    [
+      'NEW MESSAGE (ikhayahome.com)',
+      '',
+      `Name: ${form.firstName} ${form.lastName}`,
+      `Email: ${form.email}`,
+      form.subject ? `Subject: ${form.subject}` : null,
+      '',
+      form.message,
+    ]
+      .filter((line) => line !== null)
+      .join('\n');
+
+  const whatsappHref = () => `https://wa.me/${ORG_WHATSAPP}?text=${encodeURIComponent(buildMessage())}`;
+  const mailtoHref = () =>
+    `mailto:${ORG_EMAIL}?subject=${encodeURIComponent(form.subject || 'Website message')}&body=${encodeURIComponent(buildMessage())}`;
+
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
+    window.open(whatsappHref(), '_blank', 'noopener,noreferrer');
     setSubmitted(true);
   };
 
@@ -111,10 +130,26 @@ export default function ContactPage() {
               {submitted ? (
                 <div className="text-center py-10">
                   <CheckCircle className="w-14 h-14 text-teal-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-[#0d1b2a] mb-2">Message received</h3>
+                  <h3 className="text-xl font-bold text-[#0d1b2a] mb-2">One more step</h3>
                   <p className="text-gray-500 max-w-sm mx-auto">
-                    Thank you for reaching out. We read every message and will respond within 1 business day.
+                    WhatsApp has opened with your message. Press <span className="font-semibold text-[#0d1b2a]">Send</span> in WhatsApp to deliver it to us. We read every message and will respond within 1 business day of receiving it.
                   </p>
+                  <div className="flex flex-col sm:flex-row gap-2 justify-center mt-5">
+                    <a
+                      href={whatsappHref()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#0a3d47] hover:bg-[#146a82] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all"
+                    >
+                      Reopen WhatsApp
+                    </a>
+                    <a
+                      href={mailtoHref()}
+                      className="inline-block border border-gray-200 hover:bg-gray-50 text-gray-600 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all"
+                    >
+                      Send by email instead
+                    </a>
+                  </div>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ firstName: '', lastName: '', email: '', subject: '', message: '' }); }}
                     className="mt-6 text-[#0a3d47] font-semibold text-sm hover:underline"
@@ -197,22 +232,9 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      disabled={loading}
-                      className="w-full flex items-center justify-center gap-2 bg-[#0a3d47] hover:bg-[#146a82] disabled:opacity-60 text-white font-semibold py-4 rounded-xl transition-all"
+                      className="w-full flex items-center justify-center gap-2 bg-[#0a3d47] hover:bg-[#146a82] text-white font-semibold py-4 rounded-xl transition-all"
                     >
-                      {loading ? (
-                        <span className="flex items-center gap-2">
-                          <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                          </svg>
-                          Sending…
-                        </span>
-                      ) : (
-                        <>
-                          <Send className="w-4 h-4" /> Send Message
-                        </>
-                      )}
+                      <Send className="w-4 h-4" /> Send via WhatsApp
                     </button>
                   </form>
                 </>

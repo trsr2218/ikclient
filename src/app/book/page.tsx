@@ -14,6 +14,11 @@ const serviceTypes = [
 
 const timeSlots = ['08:00', '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'];
 
+// Requests are delivered over WhatsApp to the 24/7 support line; there is no
+// server-side inbox, so the wa.me handoff (with a mailto fallback) IS the submission.
+const ORG_WHATSAPP = '260966841631';
+const ORG_EMAIL = 'ikhayahome@outlook.com';
+
 export default function BookPage() {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
@@ -28,17 +33,36 @@ export default function BookPage() {
     contactMethod: 'phone',
   });
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const buildRequestMessage = () => {
+    const service = serviceTypes.find((s) => s.value === form.serviceType)?.label ?? form.serviceType;
+    return [
+      'NEW APPOINTMENT REQUEST (ikhayahome.com)',
+      '',
+      `Service: ${service}`,
+      `Date: ${form.date}`,
+      `Time: ${form.time}`,
+      `Name: ${form.firstName} ${form.lastName}`,
+      `Phone: ${form.phone}`,
+      form.email ? `Email: ${form.email}` : null,
+      `Preferred contact: ${form.contactMethod}`,
+      form.notes ? `Notes: ${form.notes}` : null,
+    ]
+      .filter(Boolean)
+      .join('\n');
+  };
+
+  const whatsappHref = () => `https://wa.me/${ORG_WHATSAPP}?text=${encodeURIComponent(buildRequestMessage())}`;
+  const mailtoHref = () =>
+    `mailto:${ORG_EMAIL}?subject=${encodeURIComponent('Appointment Request')}&body=${encodeURIComponent(buildRequestMessage())}`;
+
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setLoading(false);
+    window.open(whatsappHref(), '_blank', 'noopener,noreferrer');
     setSubmitted(true);
   };
 
@@ -80,10 +104,26 @@ export default function BookPage() {
           {submitted ? (
             <div className="bg-white rounded-2xl p-10 border border-gray-100 shadow-sm text-center">
               <CheckCircle className="w-14 h-14 text-teal-600 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-[#0d1b2a] mb-3">Appointment Requested</h2>
+              <h2 className="text-2xl font-bold text-[#0d1b2a] mb-3">One more step, {form.firstName}</h2>
               <p className="text-gray-500 max-w-sm mx-auto mb-3">
-                Thank you, <span className="font-semibold text-[#0d1b2a]">{form.firstName}</span>. We&apos;ve received your request and will confirm your appointment within 4 business hours.
+                WhatsApp has opened with your appointment request. Press <span className="font-semibold text-[#0d1b2a]">Send</span> in WhatsApp to deliver it to our team. We will confirm your appointment within 4 business hours of receiving it.
               </p>
+              <div className="flex flex-col sm:flex-row gap-2 justify-center my-3">
+                <a
+                  href={whatsappHref()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#0a3d47] hover:bg-[#146a82] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all"
+                >
+                  Reopen WhatsApp
+                </a>
+                <a
+                  href={mailtoHref()}
+                  className="inline-block border border-gray-200 hover:bg-gray-50 text-gray-600 text-sm font-semibold px-5 py-2.5 rounded-xl transition-all"
+                >
+                  Send by email instead
+                </a>
+              </div>
               {form.date && form.time && (
                 <div className="inline-flex items-center gap-3 bg-[#f0f9fb] rounded-xl px-5 py-3 text-sm text-[#0a3d47] font-medium my-3">
                   <Calendar className="w-4 h-4" /> {new Date(form.date).toLocaleDateString('en-ZM', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
@@ -281,10 +321,9 @@ export default function BookPage() {
                       <button type="button" onClick={() => setStep(2)} className="flex-1 border border-gray-200 text-gray-600 font-semibold py-3.5 rounded-xl hover:bg-gray-50 transition-all">Back</button>
                       <button
                         type="submit"
-                        disabled={loading}
-                        className="flex-1 bg-[#0a3d47] hover:bg-[#146a82] disabled:opacity-60 text-white font-semibold py-3.5 rounded-xl transition-all"
+                        className="flex-1 bg-[#0a3d47] hover:bg-[#146a82] text-white font-semibold py-3.5 rounded-xl transition-all"
                       >
-                        {loading ? 'Submitting…' : 'Request Appointment'}
+                        Send Request via WhatsApp
                       </button>
                     </div>
                   </div>
