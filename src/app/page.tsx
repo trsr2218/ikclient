@@ -275,7 +275,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-teal-100 text-xs font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm"
           >
             <Shield className="w-3.5 h-3.5 text-[#e8a838]" />
-            Serving since 2022
+            <span className="uppercase tracking-widest font-semibold">A Place Called Home - Ikhaya</span>
           </motion.div>
 
           <motion.h1
