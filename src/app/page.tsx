@@ -268,28 +268,17 @@ export default function HomePage() {
         <Orb className="w-64 h-64 bg-amber-400 bottom-32 right-10" />
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-teal-100 text-xs font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm"
-          >
-            <Shield className="w-3.5 h-3.5 text-[#e8a838]" />
-            <span className="uppercase tracking-widest font-semibold">A Place Called Home - Ikhaya</span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-6"
           >
-            A Place Called{' '}
-            <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
-              Home
-            </span>{' '}
+            A Place Called Home{' '}
             <br className="hidden sm:block" />
-            for Every Child&apos;s Safety
+            <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-[#e8a838] to-[#f5d095]">
+              - Ikhaya
+            </span>
           </motion.h1>
 
           <motion.p
