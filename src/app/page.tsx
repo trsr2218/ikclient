@@ -287,7 +287,7 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-teal-100/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            A Place Called Home works across Zambia on awareness, prevention, and response
+            A Place Called Home - Ikhaya works across Zambia on awareness, prevention, and response
             to sexual violence against children: training communities, supporting survivors, and
             driving policy change.
           </motion.p>
