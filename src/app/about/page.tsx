@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Heart, Shield, Users, Target, Eye, Award } from 'lucide-react';
+import { ArrowRight, Heart, Shield, Users, Target, Eye, Award, BookOpen, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -180,6 +180,39 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Research & Publications */}
+      <section id="research" className="py-20 px-4 bg-[#f0f9fb]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-[#e8a838] mb-3">Research &amp; Publications</span>
+            <h2 className="text-3xl font-bold text-[#0d1b2a]">Our work, published</h2>
+          </div>
+          <a
+            href="https://www.svri.org/trauma-informed-care-and-sexual-violence-response-within-faith-settings/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#0a3d47]/10 flex items-center justify-center shrink-0">
+                <BookOpen className="w-6 h-6 text-[#0a3d47]" />
+              </div>
+              <span className="text-xs font-bold text-[#e8a838]">Sexual Violence Research Initiative (SVRI), 2026</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0d1b2a] mb-3 leading-snug">
+              Trauma-informed care and sexual violence response within faith-based settings in Lusaka, Zambia
+            </h3>
+            <p className="text-sm text-gray-500 mb-4">Thornicroft, M.M., Ntebeka, B., &amp; Ahmed, C. Brief 2 of the Faith &amp; GBV PbK Practice Lab.</p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Lessons from our training of church leaders in Lusaka on responding to sexual violence in ways that protect survivor safety and use trauma-informed care. Faith leaders are often the first people survivors turn to, and this brief shows why they need to be prepared for that role.
+            </p>
+            <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0a3d47]">
+              Read the brief on SVRI <ExternalLink className="w-4 h-4" />
+            </span>
+          </a>
         </div>
       </section>
 
